@@ -125,10 +125,6 @@ listed under the [LDAP escape sequences](#ldap-escape-sequences) section.
 Similar libraries providing protections against LDAP injection, not necessarily
 in .NET.
 
-**Node.js**
-
-- [ldap-escape](#ldap-escape)
-
 ### Node.js
 
 #### ldap-escape
