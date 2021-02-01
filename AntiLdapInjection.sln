@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F6D97DDF-7104-4794-AC43-49E630E6F762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiLdapInjection", "src\AntiLdapInjection\AntiLdapInjection.csproj", "{40C15BAA-CB51-439A-898C-D1AACD4DC740}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiLdapInjection.Tests", "test\AntiLdapInjection.Tests\AntiLdapInjection.Tests.csproj", "{30114A8D-205B-463C-99FC-70FCA2A485FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5C009682-9244-46FB-A4C6-E17CD9C0F521}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{02C514E7-5C53-4DEC-BB20-46DF24866338}"
+ProjectSection(SolutionItems) = preProject
+	global.json = global.json
+	nuget.config = nuget.config
+	README.md = README.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6064EB79-B7F8-4846-BB32-F5E8660CE6BF}"
+ProjectSection(SolutionItems) = preProject
+	docs\about-ldap-injection.md = docs\about-ldap-injection.md
+EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40C15BAA-CB51-439A-898C-D1AACD4DC740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C15BAA-CB51-439A-898C-D1AACD4DC740}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C15BAA-CB51-439A-898C-D1AACD4DC740}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C15BAA-CB51-439A-898C-D1AACD4DC740}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30114A8D-205B-463C-99FC-70FCA2A485FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30114A8D-205B-463C-99FC-70FCA2A485FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30114A8D-205B-463C-99FC-70FCA2A485FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30114A8D-205B-463C-99FC-70FCA2A485FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40C15BAA-CB51-439A-898C-D1AACD4DC740} = {F6D97DDF-7104-4794-AC43-49E630E6F762}
+		{30114A8D-205B-463C-99FC-70FCA2A485FF} = {5C009682-9244-46FB-A4C6-E17CD9C0F521}
+	EndGlobalSection
+EndGlobal

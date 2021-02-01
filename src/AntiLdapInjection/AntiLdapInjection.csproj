@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <VersionSuffix>pre</VersionSuffix>
+
+    <Title>AntiLdapInjection</Title>
+    <Description>Stand-alone LDAP encoder, based on Microsoft's AntiXss library (v4.3) LDAP encoding.</Description>
+    <Authors>Jon LaBelle</Authors>
+    <Copyright>Copyright (c) 2021 Jon LaBelle, MIT License (MIT)</Copyright>
+    <PackageTags>ldap ldap-injection security active-directory security encode sanitize library antixss</PackageTags>
+    <PackageProjectUrl>https://github.com/jonlabelle/AntiLdapInjection</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/jonlabelle/AntiLdapInjection</PackageReleaseNotes>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/jonlabelle/AntiLdapInjection</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- nuget package artifacts -->
+    <Content Include="..\..\README.md" Link="README.md">
+      <Pack>true</Pack>
+      <PackagePath>README.md</PackagePath>
+    </Content>
+
+    <Content Include="..\..\NOTICE.txt" Link="NOTICE.txt">
+      <Pack>true</Pack>
+      <PackagePath>NOTICE.txt</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- nuget package artifacts -->
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    <None Remove="Internal\CodeCharts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Internal\CodeCharts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Internal\CodeCharts\**" />
+  </ItemGroup>
+
+</Project>
