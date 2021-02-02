@@ -42,15 +42,6 @@
   <ItemGroup>
     <!-- nuget package artifacts -->
     <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
-    <None Remove="Internal\CodeCharts\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Internal\CodeCharts\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="Internal\CodeCharts\**" />
   </ItemGroup>
 
 </Project>
