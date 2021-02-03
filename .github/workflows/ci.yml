@@ -22,21 +22,26 @@ jobs:
         job:
           - os: macos-latest
             build: bash build.sh ci
+
           - os: ubuntu-latest
             build: bash build.sh ci
+
+          - os: windows-latest
+            build: |
+              dotnet restore
+              dotnet build --configuration Release --no-restore
+              dotnet test --configuration Release --verbosity --no-restore normal "test\AntiLdapInjection.Tests\AntiLdapInjection.Tests.csproj"
 
     name: ${{ matrix.job.os }}
     runs-on: ${{ matrix.job.os }}
 
     steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v2
+
       - name: Setup .NET v5
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: "5.0.x"
-
-      - name: Checkout Git repository
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - run: ${{ matrix.job.build }}
