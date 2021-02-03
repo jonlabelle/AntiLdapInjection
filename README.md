@@ -10,6 +10,37 @@ A .NET library that provides protection against LDAP Injection.
 > Most of the of the code was extracted from Microsoft's AntiXss library (v4.3)
 > LDAP Encoder, which is no longer maintained.
 
+## Installation
+
+The latest AntiLdapInjection package is available for installation on [NuGet](https://www.nuget.org/packages/AntiLdapInjection). Use any of the following client tool commands listed below to install the package.
+
+- [.NET CLI](#install-package-using-dotnet-cli)
+- [NuGet Package Manager](#install-package-using-nuget-package-manager)
+- [PackageReference](#install-package-using-packagereference)
+
+### Install package using dotnet CLI
+    
+```bash
+dotnet add package AntiLdapInjection
+```
+
+### Install package using NuGet Package Manager
+
+```powershell
+Install-Package AntiLdapInjection
+```
+
+### Install package using PackageReference
+
+For projects that support [PackageReference](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files),
+copy this XML node into the project file to reference the package.
+
+```xml
+<PackageReference Include="AntiLdapInjection" Version="x.x.x" />
+```
+
+> Be sure to replace `x.x.x` with an appropriate **Version**.
+
 ## Usage
 
 ### FilterEncode
