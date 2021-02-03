@@ -1,9 +1,9 @@
 # Anti-LDAP Injection
 
-[![CI build status](https://github.com/jonlabelle/AntiLdapInjection/workflows/ci/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Aci)
-[![CD release status](https://github.com/jonlabelle/AntiLdapInjection/workflows/cd/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Acd)
-[![NuGet](https://img.shields.io/nuget/vpre/AntiLdapInjection?color=blue&label=nuget&logo=nuget)](https://www.nuget.org/packages/AntiLdapInjection)
-[![NuGet downloads](https://img.shields.io/nuget/dt/AntiLdapInjection?color=blue&label=downloads)](https://www.nuget.org/packages/AntiLdapInjection)
+[![CI build status](https://github.com/jonlabelle/AntiLdapInjection/workflows/ci/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Aci "CI build status")
+[![CD release status](https://github.com/jonlabelle/AntiLdapInjection/workflows/cd/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Acd "CD release status")
+[![Latest NuGet release](https://img.shields.io/nuget/vpre/AntiLdapInjection?color=blue&label=nuget&logo=nuget)](https://www.nuget.org/packages/AntiLdapInjection "Latest NuGet release")
+[![Total NuGet installs](https://img.shields.io/nuget/dt/AntiLdapInjection?color=blue&label=installs&logo=nuget)](https://www.nuget.org/packages/AntiLdapInjection "Total NuGet installs")
 
 A .NET library that provides protection against LDAP Injection.
 
