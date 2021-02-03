@@ -6,7 +6,7 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
 
     <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix>pre</VersionSuffix>
+    <VersionSuffix></VersionSuffix>
 
     <Title>AntiLdapInjection</Title>
     <Description>Stand-alone LDAP encoder, based on Microsoft's AntiXss library (v4.3) LDAP encoding.</Description>
