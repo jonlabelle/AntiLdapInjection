@@ -44,4 +44,5 @@ jobs:
         with:
           dotnet-version: "5.0.x"
 
-      - run: ${{ matrix.job.build }}
+      - name: Run build and tests
+        run: ${{ matrix.job.build }}
