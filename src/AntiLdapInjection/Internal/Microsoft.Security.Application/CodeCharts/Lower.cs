@@ -32,7 +32,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// <param name="flags">The value to check.</param>
         /// <param name="flagToCheck">The flag to check for.</param>
         /// <returns>true if the flag is set, otherwise false.</returns>
-        public static bool IsFlagSet(LowerCodeCharts flags, LowerCodeCharts flagToCheck)
+        internal static bool IsFlagSet(LowerCodeCharts flags, LowerCodeCharts flagToCheck)
         {
             return (flags & flagToCheck) != 0;
         }
@@ -41,7 +41,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Basic Latin code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable BasicLatin()
+        internal static IEnumerable BasicLatin()
         {
             return CodeChartHelper.GetRange(32, 126);
         }
@@ -50,7 +50,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Latin 1 Supplement code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Latin1Supplement()
+        internal static IEnumerable Latin1Supplement()
         {
             return CodeChartHelper.GetRange(161, 255, (int i) => i == 173);
         }
@@ -59,7 +59,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Latin Extended A code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable LatinExtendedA()
+        internal static IEnumerable LatinExtendedA()
         {
             return CodeChartHelper.GetRange(256, 383);
         }
@@ -68,7 +68,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Latin Extended B code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable LatinExtendedB()
+        internal static IEnumerable LatinExtendedB()
         {
             return CodeChartHelper.GetRange(384, 591);
         }
@@ -77,7 +77,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the IPA Extensions code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable IpaExtensions()
+        internal static IEnumerable IpaExtensions()
         {
             return CodeChartHelper.GetRange(592, 687);
         }
@@ -86,7 +86,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Spacing Modifiers code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable SpacingModifierLetters()
+        internal static IEnumerable SpacingModifierLetters()
         {
             return CodeChartHelper.GetRange(688, 767);
         }
@@ -95,7 +95,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Combining Diacritical Marks code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable CombiningDiacriticalMarks()
+        internal static IEnumerable CombiningDiacriticalMarks()
         {
             return CodeChartHelper.GetRange(768, 879);
         }
@@ -104,7 +104,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Greek and Coptic code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable GreekAndCoptic()
+        internal static IEnumerable GreekAndCoptic()
         {
             return CodeChartHelper.GetRange(880, 1023, delegate(int i)
             {
@@ -135,7 +135,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Cyrillic code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Cyrillic()
+        internal static IEnumerable Cyrillic()
         {
             return CodeChartHelper.GetRange(1024, 1279);
         }
@@ -144,7 +144,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Cyrillic Supplement code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable CyrillicSupplement()
+        internal static IEnumerable CyrillicSupplement()
         {
             return CodeChartHelper.GetRange(1280, 1317);
         }
@@ -153,7 +153,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Armenian code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Armenian()
+        internal static IEnumerable Armenian()
         {
             return CodeChartHelper.GetRange(1329, 1418, (int i) => i == 1367 || i == 1368 || i == 1376 || i == 1416);
         }
@@ -162,7 +162,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Hebrew code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Hebrew()
+        internal static IEnumerable Hebrew()
         {
             return CodeChartHelper.GetRange(1425, 1524,
                 (int i) => (i >= 1480 && i <= 1487) || (i >= 1515 && i <= 1519));
@@ -172,7 +172,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Arabic code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Arabic()
+        internal static IEnumerable Arabic()
         {
             return CodeChartHelper.GetRange(1536, 1791,
                 (int i) => i == 1540 || i == 1541 || i == 1564 || i == 1565 || i == 1568 || i == 1631);
@@ -182,7 +182,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Syriac code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Syriac()
+        internal static IEnumerable Syriac()
         {
             return CodeChartHelper.GetRange(1792, 1871, (int i) => i == 1806 || i == 1867 || i == 1868);
         }
@@ -191,7 +191,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Arabic Supplement code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable ArabicSupplement()
+        internal static IEnumerable ArabicSupplement()
         {
             return CodeChartHelper.GetRange(1872, 1919);
         }
@@ -200,7 +200,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Thaana code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Thaana()
+        internal static IEnumerable Thaana()
         {
             return CodeChartHelper.GetRange(1920, 1969);
         }
@@ -209,7 +209,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Nko code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Nko()
+        internal static IEnumerable Nko()
         {
             return CodeChartHelper.GetRange(1984, 2042);
         }
@@ -218,7 +218,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Samaritan code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Samaritan()
+        internal static IEnumerable Samaritan()
         {
             return CodeChartHelper.GetRange(2048, 2110, (int i) => i == 2094 || i == 2095);
         }
@@ -227,7 +227,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Devenagari code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Devanagari()
+        internal static IEnumerable Devanagari()
         {
             return CodeChartHelper.GetRange(2304, 2431,
                 (int i) => i == 2362 || i == 2363 || i == 2383 || i == 2390 || i == 2391 || (i >= 2419 && i <= 2424));
@@ -237,7 +237,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Bengali code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Bengali()
+        internal static IEnumerable Bengali()
         {
             return CodeChartHelper.GetRange(2433, 2555, delegate(int i)
             {
@@ -285,7 +285,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Gurmukhi code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Gurmukhi()
+        internal static IEnumerable Gurmukhi()
         {
             return CodeChartHelper.GetRange(2561, 2677, delegate(int i)
             {
@@ -351,7 +351,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Gujarati code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Gujarati()
+        internal static IEnumerable Gujarati()
         {
             return CodeChartHelper.GetRange(2689, 2801, delegate(int i)
             {
@@ -402,7 +402,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Oriya code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Oriya()
+        internal static IEnumerable Oriya()
         {
             return CodeChartHelper.GetRange(2817, 2929, delegate(int i)
             {
@@ -448,7 +448,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Tamil code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Tamil()
+        internal static IEnumerable Tamil()
         {
             return CodeChartHelper.GetRange(2946, 3066, delegate(int i)
             {
@@ -514,7 +514,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Telugu code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Telugu()
+        internal static IEnumerable Telugu()
         {
             return CodeChartHelper.GetRange(3073, 3199, delegate(int i)
             {
@@ -574,7 +574,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Kannada code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Kannada()
+        internal static IEnumerable Kannada()
         {
             return CodeChartHelper.GetRange(3202, 3314, delegate(int i)
             {
@@ -614,7 +614,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Malayalam code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Malayalam()
+        internal static IEnumerable Malayalam()
         {
             return CodeChartHelper.GetRange(3330, 3455, delegate(int i)
             {
@@ -656,7 +656,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Sinhala code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Sinhala()
+        internal static IEnumerable Sinhala()
         {
             return CodeChartHelper.GetRange(3458, 3572, delegate(int i)
             {
@@ -700,7 +700,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Thai code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Thai()
+        internal static IEnumerable Thai()
         {
             return CodeChartHelper.GetRange(3585, 3675, (int i) => i >= 3643 && i <= 3646);
         }
@@ -709,7 +709,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Lao code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Lao()
+        internal static IEnumerable Lao()
         {
             return CodeChartHelper.GetRange(3713, 3805, delegate(int i)
             {
@@ -747,7 +747,7 @@ namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
         /// Provides the safe characters for the Tibetan code table.
         /// </summary>
         /// <returns>The safe characters for the code table.</returns>
-        public static IEnumerable Tibetan()
+        internal static IEnumerable Tibetan()
         {
             return CodeChartHelper.GetRange(3840, 4056, delegate(int i)
             {
