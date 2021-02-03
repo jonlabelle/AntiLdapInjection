@@ -28,9 +28,9 @@ jobs:
 
           - os: windows-latest
             build: |
-              dotnet restore
-              dotnet build --configuration Release --no-restore
-              dotnet test --configuration Release --verbosity --no-restore normal "test\AntiLdapInjection.Tests\AntiLdapInjection.Tests.csproj"
+              dotnet restore;
+              dotnet build --configuration Release --no-restore;
+              dotnet test --configuration Release --verbosity normal --no-restore "test\AntiLdapInjection.Tests\AntiLdapInjection.Tests.csproj";
 
     name: ${{ matrix.job.os }}
     runs-on: ${{ matrix.job.os }}
