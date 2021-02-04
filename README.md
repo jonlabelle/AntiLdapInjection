@@ -138,7 +138,7 @@ example, if you are concatenating a escaped distinguished name fragment into the
 midst of a complete distinguished name.
 
 ```csharp
-DistinguishedNameEncode( string input,  bool useInitialCharacterRules,  bool useFinalCharacterRule)
+DistinguishedNameEncode(string input, bool useInitialCharacterRules, bool useFinalCharacterRule)
 ```
 
 In addition to the RFC mandated escaping, the safe list excludes the characters
