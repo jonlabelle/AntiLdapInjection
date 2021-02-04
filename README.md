@@ -39,7 +39,7 @@ unsafe character\).
 
 #### FilterEncode examples
 
-##### Opening/closing parenthesis
+##### Opening and closing parenthesis
 
 ```csharp
 string filter = "Parens R Us (for all your parenthetical needs)";
@@ -55,7 +55,7 @@ string encoded = LdapEncoder.FilterEncode(filter);
 Console.WriteLine(encoded); // "\2A"
 ```
 
-##### backslash in search filter
+##### Backslash in search filter
 
 ```csharp
 string filter = @"C:\MyFile";
@@ -63,7 +63,7 @@ string encoded = LdapEncoder.FilterEncode(filter);
 Console.WriteLine(encoded); // "C:\5CMyFile"
 ```
 
-##### accents in search filter
+##### Accents in search filter
 
 ```csharp
 string filter = "Lučić";
@@ -82,7 +82,7 @@ a space at the end of a string.
 
 #### DistinguishedNameEncode examples
 
-##### distinguished name slash notation
+##### Distinguished name slash notation
 
 ```csharp
 string dn = @", + \ "" \ < >";
@@ -90,7 +90,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "\, \+ \" \\ \< \>"
 ```
 
-##### leading space in distinguished name
+##### Leading space in distinguished name
 
 ```csharp
 string dn = " Hello";
@@ -98,7 +98,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "\ Hello"
 ```
 
-##### trailing space in distinguished name
+##### Trailing space in distinguished name
 
 ```csharp
 string dn = "Hello ";
@@ -106,7 +106,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "Hello\ "
 ```
 
-##### octothorpe character in distinguished name
+##### Octothorpe character in distinguished name
 
 ```csharp
 string dn = "#Hello";
@@ -114,7 +114,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "\#Hello"
 ```
 
-##### accents in distinguished name
+##### Accents in distinguished name
 
 ```csharp
 string dn = "Lučić";
