@@ -14,25 +14,20 @@ A .NET library that provides protection against LDAP Injection.
 ## Installation
 
 The latest AntiLdapInjection package is available for installation on [NuGet].
-Use any of the following client tool commands listed below to install the
-package.
 
-- [.NET CLI](#install-package-using-dotnet-cli)
-- [NuGet Package Manager](#install-package-using-nuget-package-manager)
-
-### Install package using dotnet CLI
+### Using dotnet CLI
 
 ```bash
 dotnet add package AntiLdapInjection
 ```
 
-### Install package using NuGet Package Manager
+### Using NuGet Package Manager
 
 ```powershell
 Install-Package AntiLdapInjection
 ```
 
-Additional installation options can be found on [NuGet].
+Additional package installation options can be found on [NuGet].
 
 ## Usage
 
