@@ -18,8 +18,6 @@ The latest AntiLdapInjection package is available for installation on [NuGet](ht
 - [.NET CLI](#install-package-using-dotnet-cli)
 - [NuGet Package Manager](#install-package-using-nuget-package-manager)
 
-Additional installation options can be found on the [NuGet page](https://www.nuget.org/packages/AntiLdapInjection).
-
 ### Install package using dotnet CLI
 
 ```bash
@@ -31,6 +29,8 @@ dotnet add package AntiLdapInjection
 ```powershell
 Install-Package AntiLdapInjection
 ```
+
+Additional installation options can be found on the [NuGet page](https://www.nuget.org/packages/AntiLdapInjection).
 
 ## Usage
 
