@@ -2,11 +2,13 @@ name: cd
 
 on:
   push:
+    branches: [master]
     tags:
       - "*"
     paths-ignore:
-      - "docs/**"
       - "*.md"
+      - ".editorconfig"
+      - "docs/**"
 
   workflow_dispatch:
 
