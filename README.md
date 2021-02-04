@@ -44,6 +44,7 @@ unsafe character\).
 ```csharp
 string filter = "Parens R Us (for all your parenthetical needs)";
 string encoded = LdapEncoder.FilterEncode(filter);
+
 Console.WriteLine(encoded); // "Parens R Us \28for all your parenthetical needs\29"
 ```
 
@@ -52,6 +53,7 @@ Console.WriteLine(encoded); // "Parens R Us \28for all your parenthetical needs\
 ```csharp
 string filter = "*";
 string encoded = LdapEncoder.FilterEncode(filter);
+
 Console.WriteLine(encoded); // "\2A"
 ```
 
@@ -60,6 +62,7 @@ Console.WriteLine(encoded); // "\2A"
 ```csharp
 string filter = @"C:\MyFile";
 string encoded = LdapEncoder.FilterEncode(filter);
+
 Console.WriteLine(encoded); // "C:\5CMyFile"
 ```
 
@@ -68,6 +71,7 @@ Console.WriteLine(encoded); // "C:\5CMyFile"
 ```csharp
 string filter = "Lučić";
 string encoded = LdapEncoder.FilterEncode(filter);
+
 Console.WriteLine(encoded); // "Lu\C4\8Di\C4\87"
 ```
 
@@ -87,6 +91,7 @@ a space at the end of a string.
 ```csharp
 string dn = @", + \ "" \ < >";
 string encoded = LdapEncoder.DistinguishedNameEncode(dn);
+
 Console.WriteLine(encoded); // "\, \+ \" \\ \< \>"
 ```
 
@@ -95,6 +100,7 @@ Console.WriteLine(encoded); // "\, \+ \" \\ \< \>"
 ```csharp
 string dn = " Hello";
 string encoded = LdapEncoder.DistinguishedNameEncode(dn);
+
 Console.WriteLine(encoded); // "\ Hello"
 ```
 
@@ -103,6 +109,7 @@ Console.WriteLine(encoded); // "\ Hello"
 ```csharp
 string dn = "Hello ";
 string encoded = LdapEncoder.DistinguishedNameEncode(dn);
+
 Console.WriteLine(encoded); // "Hello\ "
 ```
 
@@ -111,6 +118,7 @@ Console.WriteLine(encoded); // "Hello\ "
 ```csharp
 string dn = "#Hello";
 string encoded = LdapEncoder.DistinguishedNameEncode(dn);
+
 Console.WriteLine(encoded); // "\#Hello"
 ```
 
@@ -119,6 +127,7 @@ Console.WriteLine(encoded); // "\#Hello"
 ```csharp
 string dn = "Lučić";
 string encoded = LdapEncoder.DistinguishedNameEncode(dn);
+
 Console.WriteLine(encoded); // "Lu#C4#8Di#C4#87"
 ```
 
