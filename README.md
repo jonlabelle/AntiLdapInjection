@@ -37,7 +37,9 @@ Additional package installation options can be found on [NuGet].
 where unsafe values are converted to `\XX` \(`XX` is the representation of the
 unsafe character\).
 
-#### Example: opening/closing parenthesis
+#### FilterEncode examples
+
+##### Opening/closing parenthesis
 
 ```csharp
 string filter = "Parens R Us (for all your parenthetical needs)";
@@ -45,7 +47,7 @@ string encoded = LdapEncoder.FilterEncode(filter);
 Console.WriteLine(encoded); // "Parens R Us \28for all your parenthetical needs\29"
 ```
 
-#### Example: asterisk in search filter
+##### Asterisk in search filter
 
 ```csharp
 string filter = "*";
@@ -53,7 +55,7 @@ string encoded = LdapEncoder.FilterEncode(filter);
 Console.WriteLine(encoded); // "\2A"
 ```
 
-#### Example: backslash in search filter
+##### backslash in search filter
 
 ```csharp
 string filter = @"C:\MyFile";
@@ -61,7 +63,7 @@ string encoded = LdapEncoder.FilterEncode(filter);
 Console.WriteLine(encoded); // "C:\5CMyFile"
 ```
 
-#### Example: accents in search filter
+##### accents in search filter
 
 ```csharp
 string filter = "Lučić";
@@ -78,7 +80,9 @@ than signs are escaped using slash notation (`\X`). In addition to this, a space
 or octothorpe (`#`) at the beginning of the input string is escaped (`\`), as is
 a space at the end of a string.
 
-#### Example: distinguished name slash notation
+#### DistinguishedNameEncode examples
+
+##### distinguished name slash notation
 
 ```csharp
 string dn = @", + \ "" \ < >";
@@ -86,7 +90,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "\, \+ \" \\ \< \>"
 ```
 
-#### Example: leading space in distinguished name
+##### leading space in distinguished name
 
 ```csharp
 string dn = " Hello";
@@ -94,7 +98,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "\ Hello"
 ```
 
-#### Example: trailing space in distinguished name
+##### trailing space in distinguished name
 
 ```csharp
 string dn = "Hello ";
@@ -102,7 +106,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "Hello\ "
 ```
 
-#### Example: octothorpe character in distinguished name
+##### octothorpe character in distinguished name
 
 ```csharp
 string dn = "#Hello";
@@ -110,7 +114,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "\#Hello"
 ```
 
-#### Example: accents in distinguished name
+##### accents in distinguished name
 
 ```csharp
 string dn = "Lučić";
@@ -118,7 +122,7 @@ string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 Console.WriteLine(encoded); // "Lu#C4#8Di#C4#87"
 ```
 
-#### Initial and final character overrides
+##### Initial and final character overrides
 
 You have the option to turn off initial or final character escaping rules. For
 example, if you are concatenating a escaped distinguished name fragment into the
