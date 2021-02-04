@@ -5,7 +5,7 @@ on:
     paths-ignore:
       - "*.md"
       - ".editorconfig"
-      - "resources/**"
+      - "docs/**"
 
   workflow_dispatch:
 
