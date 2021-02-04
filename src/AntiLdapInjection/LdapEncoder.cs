@@ -21,8 +21,7 @@ namespace AntiLdapInjection
 {
     /// <summary>
     /// Performs encoding of input strings to provide protection against
-    /// Cross-Site Scripting (XSS) attacks and LDAP injection attacks in
-    /// various contexts.
+    /// LDAP injection attacks in various contexts.
     /// </summary>
     /// <remarks>
     /// This encoding library uses the Principle of Inclusions,
