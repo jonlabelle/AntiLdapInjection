@@ -17,7 +17,8 @@ The latest AntiLdapInjection package is available for installation on [NuGet](ht
 
 - [.NET CLI](#install-package-using-dotnet-cli)
 - [NuGet Package Manager](#install-package-using-nuget-package-manager)
-- [PackageReference](#install-package-using-packagereference)
+
+Additional installation options can be found on the [NuGet page](https://www.nuget.org/packages/AntiLdapInjection).
 
 ### Install package using dotnet CLI
 
@@ -30,16 +31,6 @@ dotnet add package AntiLdapInjection
 ```powershell
 Install-Package AntiLdapInjection
 ```
-
-### Install package using PackageReference
-
-For projects that support [PackageReference](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files), copy this XML node into the project file to reference the package.
-
-```xml
-<PackageReference Include="AntiLdapInjection" Version="x.x.x" />
-```
-
-> Be sure to replace `x.x.x` with an appropriate **Version**.
 
 ## Usage
 
