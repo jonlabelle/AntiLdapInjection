@@ -17,7 +17,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
+namespace AntiLdapInjection
 {
     using System.Collections;
 

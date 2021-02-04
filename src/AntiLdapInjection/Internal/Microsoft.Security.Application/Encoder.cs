@@ -19,12 +19,11 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace AntiLdapInjection.Internal.Microsoft.Security.Application
+namespace AntiLdapInjection
 {
     using System;
     using System.Collections;
     using System.Text;
-    using CodeCharts;
 
     /// <summary>
     /// Provides LDAP Encoding methods.

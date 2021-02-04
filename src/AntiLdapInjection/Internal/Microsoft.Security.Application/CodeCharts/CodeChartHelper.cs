@@ -17,12 +17,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace AntiLdapInjection.Internal.Microsoft.Security.Application.CodeCharts
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
+namespace AntiLdapInjection
+{
     /// <summary>
     /// Helper functions to simplify range/safe enumerations.
     /// </summary>

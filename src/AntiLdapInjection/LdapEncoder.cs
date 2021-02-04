@@ -19,8 +19,6 @@
 
 namespace AntiLdapInjection
 {
-    using Internal.Microsoft.Security.Application;
-
     /// <summary>
     /// Performs encoding of input strings to provide protection against
     /// Cross-Site Scripting (XSS) attacks and LDAP injection attacks in
