@@ -13,7 +13,9 @@ A .NET library that provides protection against LDAP Injection.
 
 ## Installation
 
-The latest AntiLdapInjection package is available for installation on [NuGet](https://www.nuget.org/packages/AntiLdapInjection). Use any of the following client tool commands listed below to install the package.
+The latest AntiLdapInjection package is available for installation on [NuGet].
+Use any of the following client tool commands listed below to install the
+package.
 
 - [.NET CLI](#install-package-using-dotnet-cli)
 - [NuGet Package Manager](#install-package-using-nuget-package-manager)
@@ -30,7 +32,7 @@ dotnet add package AntiLdapInjection
 Install-Package AntiLdapInjection
 ```
 
-Additional installation options can be found on the [NuGet page](https://www.nuget.org/packages/AntiLdapInjection).
+Additional installation options can be found on [NuGet].
 
 ## Usage
 
@@ -160,3 +162,5 @@ template literal tag functions for LDAP filters and distinguished names to
 prevent LDAP injection attacks.
 
 [Web Application Security Consortium: LDAP Injection]: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
+
+[NuGet]: https://www.nuget.org/packages/AntiLdapInjection
