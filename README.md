@@ -174,9 +174,9 @@ prevent LDAP injection attacks.
 
 ## Other noteworthy .NET LDAP-related libraries
 
-- **LdapForNet** Cross platform port of OpenLdap Client library and Windows LDAP to .NET Core
+- **LdapForNet:** Cross platform port of OpenLdap Client library and Windows LDAP to .NET Core
     - \[ [NuGet](https://www.nuget.org/packages/LdapForNet) \] \[ [GitHub](https://github.com/flamencist/ldap4net) \]
-- **Linq2Ldap** Wrapper around System.DirectoryServices using LINQ Expressions as LDAP filters
+- **Linq2Ldap:** Wrapper around System.DirectoryServices using LINQ Expressions as LDAP filters
     - \[ [NuGet](https://www.nuget.org/packages/Linq2Ldap) \] \[ [GitHub](https://github.com/cdibbs/linq2ldap) \]
 
 [Web Application Security Consortium: LDAP Injection]: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
