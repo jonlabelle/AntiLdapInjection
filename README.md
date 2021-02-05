@@ -143,9 +143,6 @@ midst of a complete distinguished name.
 DistinguishedNameEncode(string input, bool useInitialCharacterRules, bool useFinalCharacterRule)
 ```
 
-In addition to the RFC mandated escaping, the safe list excludes the characters
-listed under the [LDAP escape sequences](#ldap-escape-sequences) section.
-
 ## LDAP injection resources
 
 - [OWASP: LDAP Injection Prevention Cheat Sheet](https://www.owasp.org/index.php/LDAP_injection)
