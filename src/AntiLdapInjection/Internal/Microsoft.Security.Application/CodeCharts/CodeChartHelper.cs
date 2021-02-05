@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="CodeChartHelper.cs" company="Microsoft Corporation">
 //   Copyright (c) 2008, 2009, 2010 All Rights Reserved, Microsoft Corporation
 //
@@ -17,12 +17,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace AntiLdapInjection
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
     /// <summary>
     /// Helper functions to simplify range/safe enumerations.
     /// </summary>

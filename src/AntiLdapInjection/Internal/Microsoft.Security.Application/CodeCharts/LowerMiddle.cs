@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="LowerMiddle.cs" company="Microsoft Corporation">
 //   Copyright (c) 2008, 2009, 2010 All Rights Reserved, Microsoft Corporation
 //
@@ -173,7 +173,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Mongolian()
         {
-            return CodeChartHelper.GetRange(6144, 6314, delegate(int i)
+            return CodeChartHelper.GetRange(6144, 6314, delegate (int i)
             {
                 switch (i)
                 {
@@ -211,7 +211,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Limbu()
         {
-            return CodeChartHelper.GetRange(6400, 6479, delegate(int i)
+            return CodeChartHelper.GetRange(6400, 6479, delegate (int i)
             {
                 switch (i)
                 {
@@ -279,7 +279,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable TaiTham()
         {
-            return CodeChartHelper.GetRange(6688, 6829, delegate(int i)
+            return CodeChartHelper.GetRange(6688, 6829, delegate (int i)
             {
                 switch (i)
                 {

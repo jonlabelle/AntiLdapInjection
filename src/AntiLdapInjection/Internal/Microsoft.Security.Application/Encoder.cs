@@ -72,7 +72,7 @@ namespace AntiLdapInjection
                 }
                 else
                 {
-                    array[length++] = (char) b;
+                    array[length++] = (char)b;
                 }
             }
 
@@ -132,7 +132,7 @@ namespace AntiLdapInjection
                 }
                 else
                 {
-                    array[length++] = (char) b;
+                    array[length++] = (char)b;
                 }
             }
 

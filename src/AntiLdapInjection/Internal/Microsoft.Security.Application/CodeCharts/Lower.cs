@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="Lower.cs" company="Microsoft Corporation">
 //   Copyright (c) 2008, 2009, 2010 All Rights Reserved, Microsoft Corporation
 //
@@ -106,7 +106,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable GreekAndCoptic()
         {
-            return CodeChartHelper.GetRange(880, 1023, delegate(int i)
+            return CodeChartHelper.GetRange(880, 1023, delegate (int i)
             {
                 switch (i)
                 {
@@ -239,7 +239,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Bengali()
         {
-            return CodeChartHelper.GetRange(2433, 2555, delegate(int i)
+            return CodeChartHelper.GetRange(2433, 2555, delegate (int i)
             {
                 switch (i)
                 {
@@ -287,7 +287,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Gurmukhi()
         {
-            return CodeChartHelper.GetRange(2561, 2677, delegate(int i)
+            return CodeChartHelper.GetRange(2561, 2677, delegate (int i)
             {
                 switch (i)
                 {
@@ -353,7 +353,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Gujarati()
         {
-            return CodeChartHelper.GetRange(2689, 2801, delegate(int i)
+            return CodeChartHelper.GetRange(2689, 2801, delegate (int i)
             {
                 switch (i)
                 {
@@ -404,7 +404,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Oriya()
         {
-            return CodeChartHelper.GetRange(2817, 2929, delegate(int i)
+            return CodeChartHelper.GetRange(2817, 2929, delegate (int i)
             {
                 switch (i)
                 {
@@ -450,7 +450,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Tamil()
         {
-            return CodeChartHelper.GetRange(2946, 3066, delegate(int i)
+            return CodeChartHelper.GetRange(2946, 3066, delegate (int i)
             {
                 switch (i)
                 {
@@ -516,7 +516,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Telugu()
         {
-            return CodeChartHelper.GetRange(3073, 3199, delegate(int i)
+            return CodeChartHelper.GetRange(3073, 3199, delegate (int i)
             {
                 switch (i)
                 {
@@ -576,7 +576,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Kannada()
         {
-            return CodeChartHelper.GetRange(3202, 3314, delegate(int i)
+            return CodeChartHelper.GetRange(3202, 3314, delegate (int i)
             {
                 switch (i)
                 {
@@ -616,7 +616,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Malayalam()
         {
-            return CodeChartHelper.GetRange(3330, 3455, delegate(int i)
+            return CodeChartHelper.GetRange(3330, 3455, delegate (int i)
             {
                 switch (i)
                 {
@@ -658,7 +658,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Sinhala()
         {
-            return CodeChartHelper.GetRange(3458, 3572, delegate(int i)
+            return CodeChartHelper.GetRange(3458, 3572, delegate (int i)
             {
                 switch (i)
                 {
@@ -711,7 +711,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Lao()
         {
-            return CodeChartHelper.GetRange(3713, 3805, delegate(int i)
+            return CodeChartHelper.GetRange(3713, 3805, delegate (int i)
             {
                 switch (i)
                 {
@@ -749,7 +749,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Tibetan()
         {
-            return CodeChartHelper.GetRange(3840, 4056, delegate(int i)
+            return CodeChartHelper.GetRange(3840, 4056, delegate (int i)
             {
                 switch (i)
                 {

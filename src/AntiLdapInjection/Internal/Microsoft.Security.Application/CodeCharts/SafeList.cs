@@ -1,4 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="SafeList.cs" company="Microsoft Corporation">
 //   Copyright (c) 2008, 2009, 2010 All Rights Reserved, Microsoft Corporation
 //
@@ -255,39 +255,39 @@ namespace AntiLdapInjection
         /// </summary>
         /// <param name="safeList">The safe list to punch through.</param>
         /// <param name="codeCharts">The code charts to punch.</param>
-        private static void PunchCodeCharts (ref char[][] safeList, LowerCodeCharts codeCharts)
+        private static void PunchCodeCharts(ref char[][] safeList, LowerCodeCharts codeCharts)
         {
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.BasicLatin), Lower.BasicLatin ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.C1ControlsAndLatin1Supplement), Lower.Latin1Supplement ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.LatinExtendedA), Lower.LatinExtendedA ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.LatinExtendedB), Lower.LatinExtendedB ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.IpaExtensions), Lower.IpaExtensions ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.SpacingModifierLetters), Lower.SpacingModifierLetters ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.CombiningDiacriticalMarks), Lower.CombiningDiacriticalMarks ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.GreekAndCoptic), Lower.GreekAndCoptic ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Cyrillic), Lower.Cyrillic ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.CyrillicSupplement), Lower.CyrillicSupplement ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Armenian), Lower.Armenian ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Hebrew), Lower.Hebrew ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Arabic), Lower.Arabic ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Syriac), Lower.Syriac ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.ArabicSupplement), Lower.ArabicSupplement ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Thaana), Lower.Thaana ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Nko), Lower.Nko ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Samaritan), Lower.Samaritan ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Devanagari), Lower.Devanagari ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Bengali), Lower.Bengali ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Gurmukhi), Lower.Gurmukhi ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Gujarati), Lower.Gujarati ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Oriya), Lower.Oriya ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Tamil), Lower.Tamil ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Telugu), Lower.Telugu ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Kannada), Lower.Kannada ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Malayalam), Lower.Malayalam ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Sinhala), Lower.Sinhala ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Thai), Lower.Thai ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Lao), Lower.Lao ());
-            PunchHolesIfNeeded (ref safeList, Lower.IsFlagSet (codeCharts, LowerCodeCharts.Tibetan), Lower.Tibetan ());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.BasicLatin), Lower.BasicLatin());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.C1ControlsAndLatin1Supplement), Lower.Latin1Supplement());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.LatinExtendedA), Lower.LatinExtendedA());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.LatinExtendedB), Lower.LatinExtendedB());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.IpaExtensions), Lower.IpaExtensions());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.SpacingModifierLetters), Lower.SpacingModifierLetters());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.CombiningDiacriticalMarks), Lower.CombiningDiacriticalMarks());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.GreekAndCoptic), Lower.GreekAndCoptic());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Cyrillic), Lower.Cyrillic());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.CyrillicSupplement), Lower.CyrillicSupplement());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Armenian), Lower.Armenian());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Hebrew), Lower.Hebrew());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Arabic), Lower.Arabic());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Syriac), Lower.Syriac());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.ArabicSupplement), Lower.ArabicSupplement());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Thaana), Lower.Thaana());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Nko), Lower.Nko());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Samaritan), Lower.Samaritan());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Devanagari), Lower.Devanagari());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Bengali), Lower.Bengali());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Gurmukhi), Lower.Gurmukhi());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Gujarati), Lower.Gujarati());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Oriya), Lower.Oriya());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Tamil), Lower.Tamil());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Telugu), Lower.Telugu());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Kannada), Lower.Kannada());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Malayalam), Lower.Malayalam());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Sinhala), Lower.Sinhala());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Thai), Lower.Thai());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Lao), Lower.Lao());
+            PunchHolesIfNeeded(ref safeList, Lower.IsFlagSet(codeCharts, LowerCodeCharts.Tibetan), Lower.Tibetan());
         }
 
         /// <summary>
@@ -295,39 +295,39 @@ namespace AntiLdapInjection
         /// </summary>
         /// <param name="safeList">The safe list to punch through.</param>
         /// <param name="codeCharts">The code charts to punch.</param>
-        private static void PunchCodeCharts (ref char[][] safeList, LowerMidCodeCharts codeCharts)
+        private static void PunchCodeCharts(ref char[][] safeList, LowerMidCodeCharts codeCharts)
         {
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Myanmar), LowerMiddle.Myanmar ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Georgian), LowerMiddle.Georgian ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.HangulJamo), LowerMiddle.HangulJamo ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Ethiopic), LowerMiddle.Ethiopic ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.EthiopicSupplement), LowerMiddle.EthiopicSupplement ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Cherokee), LowerMiddle.Cherokee ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.UnifiedCanadianAboriginalSyllabics), LowerMiddle.UnifiedCanadianAboriginalSyllabics ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Ogham), LowerMiddle.Ogham ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Runic), LowerMiddle.Runic ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Tagalog), LowerMiddle.Tagalog ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Hanunoo), LowerMiddle.Hanunoo ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Buhid), LowerMiddle.Buhid ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Tagbanwa), LowerMiddle.Tagbanwa ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Khmer), LowerMiddle.Khmer ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Mongolian), LowerMiddle.Mongolian ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.UnifiedCanadianAboriginalSyllabicsExtended), LowerMiddle.UnifiedCanadianAboriginalSyllabicsExtended ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Limbu), LowerMiddle.Limbu ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.TaiLe), LowerMiddle.TaiLe ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.NewTaiLue), LowerMiddle.NewTaiLue ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.KhmerSymbols), LowerMiddle.KhmerSymbols ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Buginese), LowerMiddle.Buginese ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.TaiTham), LowerMiddle.TaiTham ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Balinese), LowerMiddle.Balinese ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Sudanese), LowerMiddle.Sudanese ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.Lepcha), LowerMiddle.Lepcha ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.OlChiki), LowerMiddle.OlChiki ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.VedicExtensions), LowerMiddle.VedicExtensions ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.PhoneticExtensions), LowerMiddle.PhoneticExtensions ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.PhoneticExtensionsSupplement), LowerMiddle.PhoneticExtensionsSupplement ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.CombiningDiacriticalMarksSupplement), LowerMiddle.CombiningDiacriticalMarksSupplement ());
-            PunchHolesIfNeeded (ref safeList, LowerMiddle.IsFlagSet (codeCharts, LowerMidCodeCharts.LatinExtendedAdditional), LowerMiddle.LatinExtendedAdditional ());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Myanmar), LowerMiddle.Myanmar());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Georgian), LowerMiddle.Georgian());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.HangulJamo), LowerMiddle.HangulJamo());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Ethiopic), LowerMiddle.Ethiopic());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.EthiopicSupplement), LowerMiddle.EthiopicSupplement());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Cherokee), LowerMiddle.Cherokee());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.UnifiedCanadianAboriginalSyllabics), LowerMiddle.UnifiedCanadianAboriginalSyllabics());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Ogham), LowerMiddle.Ogham());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Runic), LowerMiddle.Runic());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Tagalog), LowerMiddle.Tagalog());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Hanunoo), LowerMiddle.Hanunoo());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Buhid), LowerMiddle.Buhid());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Tagbanwa), LowerMiddle.Tagbanwa());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Khmer), LowerMiddle.Khmer());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Mongolian), LowerMiddle.Mongolian());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.UnifiedCanadianAboriginalSyllabicsExtended), LowerMiddle.UnifiedCanadianAboriginalSyllabicsExtended());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Limbu), LowerMiddle.Limbu());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.TaiLe), LowerMiddle.TaiLe());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.NewTaiLue), LowerMiddle.NewTaiLue());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.KhmerSymbols), LowerMiddle.KhmerSymbols());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Buginese), LowerMiddle.Buginese());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.TaiTham), LowerMiddle.TaiTham());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Balinese), LowerMiddle.Balinese());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Sudanese), LowerMiddle.Sudanese());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.Lepcha), LowerMiddle.Lepcha());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.OlChiki), LowerMiddle.OlChiki());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.VedicExtensions), LowerMiddle.VedicExtensions());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.PhoneticExtensions), LowerMiddle.PhoneticExtensions());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.PhoneticExtensionsSupplement), LowerMiddle.PhoneticExtensionsSupplement());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.CombiningDiacriticalMarksSupplement), LowerMiddle.CombiningDiacriticalMarksSupplement());
+            PunchHolesIfNeeded(ref safeList, LowerMiddle.IsFlagSet(codeCharts, LowerMidCodeCharts.LatinExtendedAdditional), LowerMiddle.LatinExtendedAdditional());
         }
 
         /// <summary>
@@ -335,39 +335,39 @@ namespace AntiLdapInjection
         /// </summary>
         /// <param name="safeList">The safe list to punch through.</param>
         /// <param name="codeCharts">The code charts to punch.</param>
-        private static void PunchCodeCharts (ref char[][] safeList, MidCodeCharts codeCharts)
+        private static void PunchCodeCharts(ref char[][] safeList, MidCodeCharts codeCharts)
         {
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.GreekExtended), Middle.GreekExtended ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.GeneralPunctuation), Middle.GeneralPunctuation ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.SuperscriptsAndSubscripts), Middle.SuperscriptsAndSubscripts ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.CurrencySymbols), Middle.CurrencySymbols ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.CombiningDiacriticalMarksForSymbols), Middle.CombiningDiacriticalMarksForSymbols ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.LetterlikeSymbols), Middle.LetterlikeSymbols ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.NumberForms), Middle.NumberForms ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.Arrows), Middle.Arrows ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.MathematicalOperators), Middle.MathematicalOperators ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.MiscellaneousTechnical), Middle.MiscellaneousTechnical ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.ControlPictures), Middle.ControlPictures ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.OpticalCharacterRecognition), Middle.OpticalCharacterRecognition ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.EnclosedAlphanumerics), Middle.EnclosedAlphanumerics ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.BoxDrawing), Middle.BoxDrawing ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.BlockElements), Middle.BlockElements ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.GeometricShapes), Middle.GeometricShapes ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.MiscellaneousSymbols), Middle.MiscellaneousSymbols ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.Dingbats), Middle.Dingbats ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.MiscellaneousMathematicalSymbolsA), Middle.MiscellaneousMathematicalSymbolsA ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.SupplementalArrowsA), Middle.SupplementalArrowsA ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.BraillePatterns), Middle.BraillePatterns ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.SupplementalArrowsB), Middle.SupplementalArrowsB ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.MiscellaneousMathematicalSymbolsB), Middle.MiscellaneousMathematicalSymbolsB ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.SupplementalMathematicalOperators), Middle.SupplementalMathematicalOperators ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.MiscellaneousSymbolsAndArrows), Middle.MiscellaneousSymbolsAndArrows ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.Glagolitic), Middle.Glagolitic ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.LatinExtendedC), Middle.LatinExtendedC ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.Coptic), Middle.Coptic ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.GeorgianSupplement), Middle.GeorgianSupplement ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.Tifinagh), Middle.Tifinagh ());
-            PunchHolesIfNeeded (ref safeList, Middle.IsFlagSet (codeCharts, MidCodeCharts.BlockElements), Middle.EthiopicExtended ());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.GreekExtended), Middle.GreekExtended());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.GeneralPunctuation), Middle.GeneralPunctuation());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.SuperscriptsAndSubscripts), Middle.SuperscriptsAndSubscripts());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.CurrencySymbols), Middle.CurrencySymbols());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.CombiningDiacriticalMarksForSymbols), Middle.CombiningDiacriticalMarksForSymbols());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.LetterlikeSymbols), Middle.LetterlikeSymbols());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.NumberForms), Middle.NumberForms());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.Arrows), Middle.Arrows());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.MathematicalOperators), Middle.MathematicalOperators());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.MiscellaneousTechnical), Middle.MiscellaneousTechnical());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.ControlPictures), Middle.ControlPictures());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.OpticalCharacterRecognition), Middle.OpticalCharacterRecognition());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.EnclosedAlphanumerics), Middle.EnclosedAlphanumerics());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.BoxDrawing), Middle.BoxDrawing());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.BlockElements), Middle.BlockElements());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.GeometricShapes), Middle.GeometricShapes());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.MiscellaneousSymbols), Middle.MiscellaneousSymbols());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.Dingbats), Middle.Dingbats());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.MiscellaneousMathematicalSymbolsA), Middle.MiscellaneousMathematicalSymbolsA());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.SupplementalArrowsA), Middle.SupplementalArrowsA());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.BraillePatterns), Middle.BraillePatterns());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.SupplementalArrowsB), Middle.SupplementalArrowsB());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.MiscellaneousMathematicalSymbolsB), Middle.MiscellaneousMathematicalSymbolsB());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.SupplementalMathematicalOperators), Middle.SupplementalMathematicalOperators());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.MiscellaneousSymbolsAndArrows), Middle.MiscellaneousSymbolsAndArrows());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.Glagolitic), Middle.Glagolitic());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.LatinExtendedC), Middle.LatinExtendedC());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.Coptic), Middle.Coptic());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.GeorgianSupplement), Middle.GeorgianSupplement());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.Tifinagh), Middle.Tifinagh());
+            PunchHolesIfNeeded(ref safeList, Middle.IsFlagSet(codeCharts, MidCodeCharts.BlockElements), Middle.EthiopicExtended());
         }
 
         /// <summary>
@@ -375,39 +375,39 @@ namespace AntiLdapInjection
         /// </summary>
         /// <param name="safeList">The safe list to punch through.</param>
         /// <param name="codeCharts">The code charts to punch.</param>
-        private static void PunchCodeCharts (ref char[][] safeList, UpperMidCodeCharts codeCharts)
+        private static void PunchCodeCharts(ref char[][] safeList, UpperMidCodeCharts codeCharts)
         {
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CyrillicExtendedA), UpperMiddle.CyrillicExtendedA ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.SupplementalPunctuation), UpperMiddle.SupplementalPunctuation ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CjkRadicalsSupplement), UpperMiddle.CjkRadicalsSupplement ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.KangxiRadicals), UpperMiddle.KangxiRadicals ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.IdeographicDescriptionCharacters), UpperMiddle.IdeographicDescriptionCharacters ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CjkSymbolsAndPunctuation), UpperMiddle.CjkSymbolsAndPunctuation ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Hiragana), UpperMiddle.Hiragana ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Katakana), UpperMiddle.Katakana ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Bopomofo), UpperMiddle.Bopomofo ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.HangulCompatibilityJamo), UpperMiddle.HangulCompatibilityJamo ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Kanbun), UpperMiddle.Kanbun ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.BopomofoExtended), UpperMiddle.BopomofoExtended ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CjkStrokes), UpperMiddle.CjkStrokes ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.KatakanaPhoneticExtensions), UpperMiddle.KatakanaPhoneticExtensions ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.EnclosedCjkLettersAndMonths), UpperMiddle.EnclosedCjkLettersAndMonths ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CjkCompatibility), UpperMiddle.CjkCompatibility ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CjkUnifiedIdeographsExtensionA), UpperMiddle.CjkUnifiedIdeographsExtensionA ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.YijingHexagramSymbols), UpperMiddle.YijingHexagramSymbols ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CjkUnifiedIdeographs), UpperMiddle.CjkUnifiedIdeographs ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.YiSyllables), UpperMiddle.YiSyllables ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.YiRadicals), UpperMiddle.YiRadicals ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Lisu), UpperMiddle.Lisu ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Vai), UpperMiddle.Vai ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CyrillicExtendedB), UpperMiddle.CyrillicExtendedB ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Bamum), UpperMiddle.Bamum ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.ModifierToneLetters), UpperMiddle.ModifierToneLetters ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.LatinExtendedD), UpperMiddle.LatinExtendedD ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.SylotiNagri), UpperMiddle.SylotiNagri ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.CommonIndicNumberForms), UpperMiddle.CommonIndicNumberForms ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Phagspa), UpperMiddle.Phagspa ());
-            PunchHolesIfNeeded (ref safeList, UpperMiddle.IsFlagSet (codeCharts, UpperMidCodeCharts.Saurashtra), UpperMiddle.Saurashtra ());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CyrillicExtendedA), UpperMiddle.CyrillicExtendedA());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.SupplementalPunctuation), UpperMiddle.SupplementalPunctuation());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CjkRadicalsSupplement), UpperMiddle.CjkRadicalsSupplement());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.KangxiRadicals), UpperMiddle.KangxiRadicals());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.IdeographicDescriptionCharacters), UpperMiddle.IdeographicDescriptionCharacters());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CjkSymbolsAndPunctuation), UpperMiddle.CjkSymbolsAndPunctuation());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Hiragana), UpperMiddle.Hiragana());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Katakana), UpperMiddle.Katakana());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Bopomofo), UpperMiddle.Bopomofo());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.HangulCompatibilityJamo), UpperMiddle.HangulCompatibilityJamo());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Kanbun), UpperMiddle.Kanbun());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.BopomofoExtended), UpperMiddle.BopomofoExtended());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CjkStrokes), UpperMiddle.CjkStrokes());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.KatakanaPhoneticExtensions), UpperMiddle.KatakanaPhoneticExtensions());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.EnclosedCjkLettersAndMonths), UpperMiddle.EnclosedCjkLettersAndMonths());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CjkCompatibility), UpperMiddle.CjkCompatibility());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CjkUnifiedIdeographsExtensionA), UpperMiddle.CjkUnifiedIdeographsExtensionA());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.YijingHexagramSymbols), UpperMiddle.YijingHexagramSymbols());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CjkUnifiedIdeographs), UpperMiddle.CjkUnifiedIdeographs());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.YiSyllables), UpperMiddle.YiSyllables());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.YiRadicals), UpperMiddle.YiRadicals());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Lisu), UpperMiddle.Lisu());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Vai), UpperMiddle.Vai());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CyrillicExtendedB), UpperMiddle.CyrillicExtendedB());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Bamum), UpperMiddle.Bamum());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.ModifierToneLetters), UpperMiddle.ModifierToneLetters());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.LatinExtendedD), UpperMiddle.LatinExtendedD());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.SylotiNagri), UpperMiddle.SylotiNagri());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.CommonIndicNumberForms), UpperMiddle.CommonIndicNumberForms());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Phagspa), UpperMiddle.Phagspa());
+            PunchHolesIfNeeded(ref safeList, UpperMiddle.IsFlagSet(codeCharts, UpperMidCodeCharts.Saurashtra), UpperMiddle.Saurashtra());
         }
 
         /// <summary>
@@ -415,30 +415,30 @@ namespace AntiLdapInjection
         /// </summary>
         /// <param name="safeList">The safe list to punch through.</param>
         /// <param name="codeCharts">The code charts to punch.</param>
-        private static void PunchCodeCharts (ref char[][] safeList, UpperCodeCharts codeCharts)
+        private static void PunchCodeCharts(ref char[][] safeList, UpperCodeCharts codeCharts)
         {
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.DevanagariExtended), Upper.DevanagariExtended ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.KayahLi), Upper.KayahLi ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.Rejang), Upper.Rejang ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.HangulJamoExtendedA), Upper.HangulJamoExtendedA ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.Javanese), Upper.Javanese ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.Cham), Upper.Cham ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.MyanmarExtendedA), Upper.MyanmarExtendedA ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.TaiViet), Upper.TaiViet ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.MeeteiMayek), Upper.MeeteiMayek ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.HangulSyllables), Upper.HangulSyllables ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.HangulJamoExtendedB), Upper.HangulJamoExtendedB ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.CjkCompatibilityIdeographs), Upper.CjkCompatibilityIdeographs ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.AlphabeticPresentationForms), Upper.AlphabeticPresentationForms ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.ArabicPresentationFormsA), Upper.ArabicPresentationFormsA ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.VariationSelectors), Upper.VariationSelectors ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.VerticalForms), Upper.VerticalForms ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.CombiningHalfMarks), Upper.CombiningHalfMarks ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.CjkCompatibilityForms), Upper.CjkCompatibilityForms ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.SmallFormVariants), Upper.SmallFormVariants ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.ArabicPresentationFormsB), Upper.ArabicPresentationFormsB ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.HalfWidthAndFullWidthForms), Upper.HalfWidthAndFullWidthForms ());
-            PunchHolesIfNeeded (ref safeList, Upper.IsFlagSet (codeCharts, UpperCodeCharts.Specials), Upper.Specials ());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.DevanagariExtended), Upper.DevanagariExtended());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.KayahLi), Upper.KayahLi());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.Rejang), Upper.Rejang());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.HangulJamoExtendedA), Upper.HangulJamoExtendedA());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.Javanese), Upper.Javanese());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.Cham), Upper.Cham());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.MyanmarExtendedA), Upper.MyanmarExtendedA());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.TaiViet), Upper.TaiViet());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.MeeteiMayek), Upper.MeeteiMayek());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.HangulSyllables), Upper.HangulSyllables());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.HangulJamoExtendedB), Upper.HangulJamoExtendedB());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.CjkCompatibilityIdeographs), Upper.CjkCompatibilityIdeographs());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.AlphabeticPresentationForms), Upper.AlphabeticPresentationForms());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.ArabicPresentationFormsA), Upper.ArabicPresentationFormsA());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.VariationSelectors), Upper.VariationSelectors());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.VerticalForms), Upper.VerticalForms());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.CombiningHalfMarks), Upper.CombiningHalfMarks());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.CjkCompatibilityForms), Upper.CjkCompatibilityForms());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.SmallFormVariants), Upper.SmallFormVariants());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.ArabicPresentationFormsB), Upper.ArabicPresentationFormsB());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.HalfWidthAndFullWidthForms), Upper.HalfWidthAndFullWidthForms());
+            PunchHolesIfNeeded(ref safeList, Upper.IsFlagSet(codeCharts, UpperCodeCharts.Specials), Upper.Specials());
         }
 
         /// <summary>
