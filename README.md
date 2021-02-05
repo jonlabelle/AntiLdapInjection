@@ -6,14 +6,14 @@
 [![Latest NuGet release](https://img.shields.io/nuget/vpre/AntiLdapInjection?color=blue&label=nuget&logo=nuget)](https://www.nuget.org/packages/AntiLdapInjection "Latest NuGet release")
 [![Total NuGet downloads](https://img.shields.io/nuget/dt/AntiLdapInjection?color=blue&label=downloads&logo=nuget)](https://www.nuget.org/stats/packages/AntiLdapInjection?groupby=Version&groupby=ClientName&groupby=ClientVersion "Total NuGet downloads")
 
-A .NET library that provides protection against LDAP Injection.
+A .NET library that provides protections against LDAP Injection.
 
 > Most of the of the code was extracted from Microsoft's AntiXss library
 > LDAP Encoder, which is no longer maintained.
 
 ## Installation
 
-The latest AntiLdapInjection package is available for installation on [NuGet].
+The latest **AntiLdapInjection** package is available for installation on [NuGet].
 
 ### Using dotnet CLI
 
