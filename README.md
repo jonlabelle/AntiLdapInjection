@@ -140,7 +140,11 @@ example, if you are concatenating a escaped distinguished name fragment into the
 midst of a complete distinguished name.
 
 ```csharp
-DistinguishedNameEncode(string input, bool useInitialCharacterRules, bool useFinalCharacterRule)
+LdapEncoder.DistinguishedNameEncode(
+    string input,
+    bool useInitialCharacterRules,
+    bool useFinalCharacterRule
+)
 ```
 
 ## LDAP injection resources
