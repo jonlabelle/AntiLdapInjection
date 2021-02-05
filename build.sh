@@ -48,20 +48,6 @@ cd_or_fail() {
 
 cd_or_fail "${REPO_ROOT}"
 
-clean_build() {
-    local build_config
-    build_config=$1
-
-    echo '--------------------------------------------------------'
-    echo ' Cleaning previous build output files'
-    echo '--------------------------------------------------------'
-    echo
-    dotnet clean --configuration "${build_config}" --verbosity ${VERBOSITY_LEVEL} "${PROJECT_NAME}.sln"
-    echo
-    echo 'Done.'
-    echo
-}
-
 clean_artifacts() {
     echo '--------------------------------------------------------'
     echo ' Cleaning artifacts directory'
@@ -114,7 +100,7 @@ build_project() {
     echo " Building ${PROJECT_NAME} project"
     echo '--------------------------------------------------------'
     echo
-    dotnet build --configuration "${build_config}" --verbosity ${VERBOSITY_LEVEL} "./src/${PROJECT_NAME}/${PROJECT_NAME}.csproj"
+    dotnet build --configuration "${build_config}" --verbosity ${VERBOSITY_LEVEL}
     echo
     echo 'Done.'
     echo
@@ -142,8 +128,7 @@ run_tests() {
     echo " Running ${TEST_PROJECT_NAME} unit tests"
     echo '--------------------------------------------------------'
     echo
-    [ -d "test/${TEST_PROJECT_NAME}/TestResults" ] && rm -rf "test/${TEST_PROJECT_NAME}/TestResults"
-    dotnet test --configuration "${build_config}" --no-restore --verbosity ${VERBOSITY_LEVEL} "./test/${TEST_PROJECT_NAME}/${TEST_PROJECT_NAME}.csproj"
+    dotnet test --configuration "${build_config}" --no-restore --verbosity ${VERBOSITY_LEVEL}
     echo
     echo 'Done.'
     echo
@@ -154,16 +139,9 @@ run_coverage() {
     echo " Generating code coverage reports"
     echo '--------------------------------------------------------'
     echo
-
-    # Clean for previous test results:
-    [ -d "test/${TEST_PROJECT_NAME}/TestResults" ] && rm -rf "test/${TEST_PROJECT_NAME}/TestResults"
-
-    # Run tests:
     dotnet test --configuration "${build_config}" --no-restore --verbosity ${VERBOSITY_LEVEL} --logger "trx;verbosity=detailed" --collect:"XPlat Code Coverage" --settings "./test/${TEST_PROJECT_NAME}/coverlet.runsettings" "./test/${TEST_PROJECT_NAME}/${TEST_PROJECT_NAME}.csproj"
-
     # Generate reports (online CLI report generator tool: https://danielpalme.github.io/ReportGenerator/usage.html)
     dotnet tool run reportgenerator "-reports:./**/coverage.cobertura.xml" "-targetdir:./artifacts/coverage" "-reporttypes:Cobertura;HtmlInline_AzurePipelines;SonarQube"
-
     echo
     echo 'Done.'
     echo
@@ -178,7 +156,6 @@ main() {
 
     case "$1" in
         "ci" | "-ci")
-            clean_build "Release"
             clean_artifacts
             restore_tools
             restore_project
@@ -190,7 +167,6 @@ main() {
             exit 1
             ;;
         "coverage" | "--coverage" | "-coverage")
-            clean_build "Release"
             clean_artifacts
             restore_tools
             restore_project
@@ -199,21 +175,18 @@ main() {
             ;;
         "debug" | "--debug" | "-d")
             clean_artifacts
-            clean_build "Debug"
             restore_tools
             restore_project
             build_project "Debug"
             ;;
         "release" | "--release" | "-r")
             clean_artifacts
-            clean_build "Release"
             restore_tools
             restore_project
             build_project "Release"
             ;;
         "package" | "--package" | "-p")
             clean_artifacts
-            clean_build "Release"
             restore_tools
             restore_project
             build_project "Release"
@@ -221,7 +194,6 @@ main() {
             ;;
         "test" | "--test" | "-test" | "-t")
             clean_artifacts
-            clean_build "Release"
             restore_tools
             restore_project
             build_project "Release"
