@@ -5,7 +5,7 @@
 
     <NoWarn>$(NoWarn);CS1591</NoWarn>
 
-    <VersionPrefix>1.0.3</VersionPrefix>
+    <VersionPrefix>1.0.4</VersionPrefix>
     <VersionSuffix></VersionSuffix>
 
     <Title>AntiLdapInjection</Title>
