@@ -75,6 +75,8 @@ string encoded = LdapEncoder.FilterEncode(filter);
 Console.WriteLine(encoded); // "Lu\C4\8Di\C4\87"
 ```
 
+---
+
 ### DistinguishedNameEncode
 
 `DistinguishedNameEncode` encodes input according to [RFC 2253](https://www.ietf.org/rfc/rfc2253.txt),
