@@ -3,6 +3,8 @@ name: code-quality-analysis
 on:
   push:
     branches: [master]
+    tags-ignore:
+      - "*"
     paths-ignore:
       - "*.md"
       - ".editorconfig"
@@ -10,6 +12,8 @@ on:
 
   pull_request:
     branches: [master]
+    tags-ignore:
+      - "*"
     paths-ignore:
       - "*.md"
       - ".editorconfig"
