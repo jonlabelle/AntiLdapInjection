@@ -2,14 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1;netstandard2.0;net45;net452;net46;net472;net5.0</TargetFrameworks>
-
     <NoWarn>$(NoWarn);CS1591</NoWarn>
 
-    <VersionPrefix>1.0.4</VersionPrefix>
-    <VersionSuffix></VersionSuffix>
+    <Version>1.0.4</Version>
 
     <Title>AntiLdapInjection</Title>
-    <Description>Stand-alone LDAP encoder, based on Microsoft's AntiXss library (v4.3) LDAP encoding.</Description>
+    <Description>Provides protections against LDAP Injection.</Description>
     <Authors>Jon LaBelle</Authors>
     <Copyright>Copyright (c) 2021 Jon LaBelle, MIT License (MIT)</Copyright>
     <PackageTags>ldap ldap-injection security active-directory security encode sanitize library antixss</PackageTags>

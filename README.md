@@ -8,7 +8,7 @@
 
 A .NET library that provides protection against LDAP Injection.
 
-> Most of the of the code was extracted from Microsoft's AntiXss library (v4.3)
+> Most of the of the code was extracted from Microsoft's AntiXss library
 > LDAP Encoder, which is no longer maintained.
 
 ## Installation
