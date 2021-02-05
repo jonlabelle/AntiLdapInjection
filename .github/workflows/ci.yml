@@ -2,6 +2,16 @@ name: ci
 
 on:
   push:
+    branches: [master]
+    tags-ignore:
+      - "*"
+    paths-ignore:
+      - "*.md"
+      - ".editorconfig"
+      - "docs/**"
+
+  pull_request:
+    branches: [master]
     tags-ignore:
       - "*"
     paths-ignore:
