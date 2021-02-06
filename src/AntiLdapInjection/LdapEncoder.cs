@@ -147,11 +147,7 @@ namespace AntiLdapInjection
         ///         <item><term>Lučić</term><description>Lu#C4#8Di#C4#87</description></item>
         ///     </list>
         /// </remarks>
-        public static string DistinguishedNameEncode(
-            string input,
-            bool useInitialCharacterRules,
-            bool useFinalCharacterRule
-        )
+        public static string DistinguishedNameEncode(string input, bool useInitialCharacterRules, bool useFinalCharacterRule)
         {
             return Encoder.DistinguishedNameEncode(input, useInitialCharacterRules, useFinalCharacterRule);
         }
