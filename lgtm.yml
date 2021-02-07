@@ -1,3 +1,4 @@
+# LGTM code analysis project configuration file (https://lgtm.com)
 extraction:
   csharp:
     index:
