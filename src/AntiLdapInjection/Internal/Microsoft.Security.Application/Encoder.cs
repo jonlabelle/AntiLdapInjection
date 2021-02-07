@@ -156,7 +156,7 @@ namespace AntiLdapInjection
         /// Provides the safe characters for LDAP filter encoding.
         /// </summary>
         /// <returns>The safe characters for LDAP filter encoding.</returns>
-        /// <remarks>See http://tools.ietf.org/html/rfc4515/</remarks>
+        /// <remarks>See https://tools.ietf.org/html/rfc4515/</remarks>
         private static IEnumerable FilterEncodingSafeList()
         {
             for (var i = 32; i <= 126; i++)
@@ -193,7 +193,7 @@ namespace AntiLdapInjection
         /// Provides the safe characters for LDAP filter encoding.
         /// </summary>
         /// <returns>The safe characters for LDAP filter encoding.</returns>
-        /// <remarks>See http://www.ietf.org/rfc/rfc2253.txt </remarks>
+        /// <remarks>See https://www.ietf.org/rfc/rfc2253.txt </remarks>
         private static IEnumerable DistinguishedNameSafeList()
         {
             for (var i = 32; i <= 126; i++)
