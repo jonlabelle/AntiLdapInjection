@@ -38,6 +38,24 @@ Additional package installation options can be found on [NuGet].
 where unsafe values are converted to `\XX` \(`XX` is the representation of the
 unsafe character\).
 
+```csharp
+LdapEncoder.FilterEncode(string filterToEncode)
+```
+
+#### FilterEncode encoding chart
+
+FilterEncode encodes LDAP search filters by converting unsafe charters to an
+appropriate `{\ASCII}` code.
+
+| Character | Encoded |
+|-----------|---------|
+| `(`       | `{\28}` |
+| `)`       | `{\29}` |
+| `\`       | `{\5c}` |
+| `*`       | `{\2a}` |
+| `/`       | `{\2f}` |
+| `NUL`     | `{\0}`  |
+
 #### FilterEncode examples
 
 ##### Opening and closing parenthesis
@@ -87,6 +105,42 @@ than signs are escaped using slash notation (`\X`). In addition to this, a space
 or octothorpe (`#`) at the beginning of the input string is escaped (`\`), as is
 a space at the end of a string.
 
+```csharp
+LdapEncoder.DistinguishedNameEncode(string distinguishedNameToEncode)
+```
+
+You have the option to turn off initial or final character escaping rules. For
+example, if you are concatenating a escaped distinguished name fragment into the
+midst of a complete distinguished name.
+
+```csharp
+LdapEncoder.DistinguishedNameEncode(
+    string distinguishedNameToEncode,
+    bool useInitialCharacterRules,
+    bool useFinalCharacterRule
+)
+```
+
+#### DistinguishedNameEncode encoding chart
+
+DistinguishedNameEncode encodes the following characters by adding a leading `\`
+(baskslash) character.
+
+| Character | Encoded |
+|-----------|---------|
+| `&`       | `\&`    |
+| `!`       | `\!`    |
+| `\|`      | `\\|`   |
+| `=`       | `\=`    |
+| `<`       | `\<`    |
+| `>`       | `\>`    |
+| `,`       | `\,`    |
+| `+`       | `\+`    |
+| `-`       | `\-`    |
+| `"`       | `\"`    |
+| `'`       | `\'`    |
+| `;`       | `\;`    |
+
 #### DistinguishedNameEncode examples
 
 ##### Distinguished name slash notation
@@ -132,20 +186,6 @@ string dn = "Lučić";
 string encoded = LdapEncoder.DistinguishedNameEncode(dn);
 
 Console.WriteLine(encoded); // "Lu#C4#8Di#C4#87"
-```
-
-##### Initial and final character overrides
-
-You have the option to turn off initial or final character escaping rules. For
-example, if you are concatenating a escaped distinguished name fragment into the
-midst of a complete distinguished name.
-
-```csharp
-LdapEncoder.DistinguishedNameEncode(
-    string input,
-    bool useInitialCharacterRules,
-    bool useFinalCharacterRule
-)
 ```
 
 ## LDAP injection resources
