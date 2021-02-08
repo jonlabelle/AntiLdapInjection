@@ -30,7 +30,6 @@ Commands:
   test        Run unit tests
   coverage    Run code coverage and generate reports
   debug       Build project using the debug build config
-  benchmark   Run benchmarks
   git-clean   Use git-clean to remove any extra folders and ignored files, but NOT newly added files
   help        Show usage information and exit
 EOF
@@ -114,7 +113,7 @@ build_package() {
     echo " Building ${PROJECT_NAME} package"
     echo '--------------------------------------------------------'
     echo
-    dotnet pack --configuration "${build_config}" --verbosity ${VERBOSITY_LEVEL} --no-restore --no-build --output artifacts/nuget "./src/${PROJECT_NAME}/${PROJECT_NAME}.csproj"
+    dotnet pack --configuration "${build_config}" --verbosity ${VERBOSITY_LEVEL} --no-restore --no-build --output artifacts/nuget-packages "./src/${PROJECT_NAME}/${PROJECT_NAME}.csproj"
     echo
     echo 'Done.'
     echo
@@ -201,10 +200,6 @@ main() {
             ;;
         "git-clean" | "--git-clean" | "-git-clean")
             run_git_clean
-            ;;
-        "bench" | "--bench" | "-bench" | "benchmark" | "-benchmark" | "--benchmark" | "benchmarks" | "-benchmarks" | "--benchmarks")
-            echo "benchmarks are not yet implemented." >&2
-            exit 1
             ;;
         "help" | "--help" | "-help" | "-h")
             show_usage
