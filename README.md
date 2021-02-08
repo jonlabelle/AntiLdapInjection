@@ -44,9 +44,6 @@ LdapEncoder.FilterEncode(string filterToEncode)
 
 #### FilterEncode encoding chart
 
-FilterEncode encodes LDAP search filters by converting unsafe charters to an
-appropriate `{\ASCII}` code.
-
 | Character | Encoded |
 |-----------|---------|
 | `(`       | `{\28}` |
@@ -122,9 +119,6 @@ LdapEncoder.DistinguishedNameEncode(
 ```
 
 #### DistinguishedNameEncode encoding chart
-
-DistinguishedNameEncode encodes the following characters by adding a leading `\`
-(baskslash) character.
 
 | Character | Encoded |
 |-----------|---------|
