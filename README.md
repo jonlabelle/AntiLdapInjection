@@ -46,12 +46,12 @@ LdapEncoder.FilterEncode(string filterToEncode)
 
 | Character | Encoded |
 |-----------|---------|
-| `(`       | `{\28}` |
-| `)`       | `{\29}` |
-| `\`       | `{\5c}` |
-| `*`       | `{\2a}` |
-| `/`       | `{\2f}` |
-| `NUL`     | `{\0}`  |
+| `(`       | `\28`   |
+| `)`       | `\29`   |
+| `\`       | `\5c`   |
+| `*`       | `\2a`   |
+| `/`       | `\2f`   |
+| `NUL`     | `\0`    |
 
 #### FilterEncode examples
 
