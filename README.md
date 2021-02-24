@@ -28,7 +28,7 @@ dotnet add package AntiLdapInjection
 Install-Package AntiLdapInjection
 ```
 
-Additional package installation options can be found on [NuGet].
+See [NuGet page] for additional installation options.
 
 ## Usage
 
@@ -216,3 +216,4 @@ prevent LDAP injection attacks.
 
 [Web Application Security Consortium: LDAP Injection]: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 [NuGet]: https://www.nuget.org/packages/AntiLdapInjection
+[NuGet page]: https://www.nuget.org/packages/AntiLdapInjection
