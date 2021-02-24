@@ -9,16 +9,34 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5C009682-9244-46FB-A4C6-E17CD9C0F521}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{02C514E7-5C53-4DEC-BB20-46DF24866338}"
-ProjectSection(SolutionItems) = preProject
-	global.json = global.json
-	nuget.config = nuget.config
-	README.md = README.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		global.json = global.json
+		nuget.config = nuget.config
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6064EB79-B7F8-4846-BB32-F5E8660CE6BF}"
-ProjectSection(SolutionItems) = preProject
-	docs\about-ldap-injection.md = docs\about-ldap-injection.md
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		docs\about-ldap-injection.md = docs\about-ldap-injection.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{34435884-B84F-45DF-8158-989815410B31}"
+	ProjectSection(SolutionItems) = preProject
+		build.sh = build.sh
+		lgtm.yml = lgtm.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{FCF52F1C-39FD-4742-A762-5F8B7C9FE821}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{C4E3CA17-AC4C-4F2A-8780-3D3069197298}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\cd.yml = .github\workflows\cd.yml
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+		.github\workflows\code-quality.yml = .github\workflows\code-quality.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,5 +56,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{40C15BAA-CB51-439A-898C-D1AACD4DC740} = {F6D97DDF-7104-4794-AC43-49E630E6F762}
 		{30114A8D-205B-463C-99FC-70FCA2A485FF} = {5C009682-9244-46FB-A4C6-E17CD9C0F521}
+		{C4E3CA17-AC4C-4F2A-8780-3D3069197298} = {FCF52F1C-39FD-4742-A762-5F8B7C9FE821}
 	EndGlobalSection
 EndGlobal
