@@ -72,13 +72,14 @@ project=AntiLdapInjection.csproj
 tmp_project="${TMPDIR:-/tmp}/$project.$$"
 sed -E s/'<Version>[0-9]+\.[0-9]+\.[0-9]+'/'<Version>'"$version"''/ $project > "$tmp_project" \
     && mv "$tmp_project" $project \
-    && grep "$version" -C 1 $project || \
-        echo "[ERROR] Bump project version failed." && exit 1
+    && grep "$version" -C 1 $project \
+    || echo "[ERROR] Bump project version failed." && exit 1
 cd "$projectroot" || exit 1
 
 #
 # push to git
 git commit -am "Bump to v$version" \
     && git tag -a "$version" -m "Tag v$version" \
+    && git push \
     && git push --tags \
     || echo "[ERROR] Git push failed." && exit 1
