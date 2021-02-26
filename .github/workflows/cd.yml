@@ -17,14 +17,15 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 
 jobs:
-  build:
+  release:
+    name: Release
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Git repository
         uses: actions/checkout@v2
 
-      - name: Setup .NET 5
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
@@ -32,17 +33,14 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build
+      - name: Build project
         run: dotnet build --configuration Release --no-restore
 
-      - name: Test
+      - name: Run tests
         run: dotnet test --no-build --configuration Release --verbosity normal
 
-      - name: Build package
+      - name: Create NuGet packages
         run: dotnet pack src/AntiLdapInjection/AntiLdapInjection.csproj --output artifacts/nuget-packages --configuration Release
 
-      - name: Publish package on nuget.org
-        run: dotnet nuget push artifacts/nuget-packages/*.nupkg --api-key ${{secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
-
-      - name: Publish package symbols on nuget.org
-        run: dotnet nuget push artifacts/nuget-packages/*.snupkg --api-key ${{secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      - name: Push NuGet packages
+        run: dotnet nuget push "artifacts/nuget-packages/*.*" --api-key ${{secrets.NUGET_API_KEY }} --skip-duplicate
