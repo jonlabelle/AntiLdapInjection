@@ -42,7 +42,7 @@ jobs:
             build: |
               dotnet restore
               dotnet build --configuration Release --no-restore
-              dotnet test --configuration Release --verbosity normal --no-restore ".\test\AntiLdapInjection.Tests\AntiLdapInjection.Tests.csproj"
+              dotnet test --configuration Release --verbosity normal --no-restore
 
     name: ${{ matrix.job.os }}
     runs-on: ${{ matrix.job.os }}
@@ -51,7 +51,7 @@ jobs:
       - name: Checkout Git repository
         uses: actions/checkout@v2
 
-      - name: Setup .NET v5
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: "5.0.x"
