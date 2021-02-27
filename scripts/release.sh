@@ -140,6 +140,12 @@ function bump_version() {
         return 1
     fi
 
+    if [ "$DRYRUN" = true ]; then
+        # reverts the change to .csproj file
+        git checkout -- "$project_file"
+        say_verbose "Reverted change to: $project_file"
+    fi
+
     return 0
 }
 
