@@ -130,7 +130,7 @@ function bump_version() {
     # replace the existing .csproj version, with the new
     sed -E s/'<Version>[0-9]+\.[0-9]+\.[0-9]+'/'<Version>'"$VERSION"''/ $project_file > "$temp_project_file" \
         && mv "$temp_project_file" "$project_file" \
-        && grep "$VERSION" -C 1 "$project_file" \
+        && grep -q "$VERSION" -C 1 "$project_file" \
         || failed=true
 
     rm -rf "$temp_project_file"
@@ -251,9 +251,7 @@ do
             ;;
         -v|--version|-[Vv]ersion)
             shift
-            if [ "$(is_semver "$1")" -ne 0 ]; then
-                exit 1
-            fi
+            is_semver "$1" || exit 1
             VERSION="$1"
             HAS_VERSION=true
             ;;
@@ -270,13 +268,12 @@ do
         *)
             # EXTRA_ARGS="$EXTRA_ARGS $1"
             if [ "$HAS_VERSION" = false ]; then
-                if [ "$(is_semver "$1")" -eq 0 ]; then
-                    VERSION="$1"
-                    HAS_VERSION=true
-                else
-                    say_err "Unknown argument \`$name\`"
-                    exit 1
-                fi
+                is_semver "$1" || exit 1
+                VERSION="$1"
+                HAS_VERSION=true
+            else
+                say_err "Unknown argument \`$name\`"
+                exit 1
             fi
             ;;
     esac
