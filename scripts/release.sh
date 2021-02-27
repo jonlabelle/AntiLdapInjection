@@ -229,7 +229,7 @@ VERBOSE=false
 CI=false
 DRYRUN=false
 VERSION=''
-HAS_VERSION_OPT=false
+HAS_VERSION=false
 # EXTRA_ARGS=''
 
 if [[ $# -eq 0 || -z $1 ]]; then
@@ -255,7 +255,7 @@ do
                 exit 1
             fi
             VERSION="$1"
-            HAS_VERSION_OPT=true
+            HAS_VERSION=true
             ;;
         -ci|--ci)
             CI=true
@@ -269,9 +269,10 @@ do
             ;;
         *)
             # EXTRA_ARGS="$EXTRA_ARGS $1"
-            if [ "$HAS_VERSION_OPT" = false ]; then
+            if [ "$HAS_VERSION" = false ]; then
                 if [ "$(is_semver "$1")" -eq 0 ]; then
                     VERSION="$1"
+                    HAS_VERSION=true
                 else
                     say_err "Unknown argument \`$name\`"
                     exit 1
@@ -282,6 +283,11 @@ do
 
     shift
 done
+
+if [ "$HAS_VERSION" = false ]; then
+    say_err "You did not provide a version for the release."
+    exit 1
+fi
 
 ensure_release_branch
 ensure_clean_working_dir
