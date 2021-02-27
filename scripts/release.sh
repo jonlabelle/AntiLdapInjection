@@ -237,28 +237,27 @@ if [[ $# -eq 0 || -z $1 ]]; then
     exit 1
 fi
 
-while [ $# -ne 0 ]
-do
+while [ $# -ne 0 ]; do
     name="$1"
     case "$name" in
         --current)
             get_current_version
             exit 0
             ;;
-        -h|--help)
+        -h | --help)
             show_usage
             exit 0
             ;;
-        -v|--version|-[Vv]ersion)
+        -v | --version | -[Vv]ersion)
             shift
             is_semver "$1" || exit 1
             VERSION="$1"
             HAS_VERSION=true
             ;;
-        -ci|--ci)
+        -ci | --ci)
             CI=true
             ;;
-        -n|--dry-run)
+        -n | --dry-run)
             DRYRUN=true
             ;;
         --verbose)
