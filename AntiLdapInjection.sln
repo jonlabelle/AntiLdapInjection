@@ -39,6 +39,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\update-dotnet-sdk.yml = .github\workflows\update-dotnet-sdk.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4D111D3F-628D-4C7F-A7D4-D67A8AC3F20B}"
+ProjectSection(SolutionItems) = preProject
+	scripts\release.sh = scripts\release.sh
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{B2834315-C4D6-433F-A90D-B1D7229979D2}"
+ProjectSection(SolutionItems) = preProject
+	scripts\inc\_output.sh = scripts\inc\_output.sh
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +68,6 @@ Global
 		{40C15BAA-CB51-439A-898C-D1AACD4DC740} = {F6D97DDF-7104-4794-AC43-49E630E6F762}
 		{30114A8D-205B-463C-99FC-70FCA2A485FF} = {5C009682-9244-46FB-A4C6-E17CD9C0F521}
 		{C4E3CA17-AC4C-4F2A-8780-3D3069197298} = {FCF52F1C-39FD-4742-A762-5F8B7C9FE821}
+		{B2834315-C4D6-433F-A90D-B1D7229979D2} = {4D111D3F-628D-4C7F-A7D4-D67A8AC3F20B}
 	EndGlobalSection
 EndGlobal
