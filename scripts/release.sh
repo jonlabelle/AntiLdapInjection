@@ -154,7 +154,7 @@ confirm_release() {
     eval $invocation
 
     if [ "$DRYRUN" = true ]; then
-        say "Dry run only, changes will not be commited."
+        say "Dry run only, changes will not be committed."
         exit 0
     fi
 
