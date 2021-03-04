@@ -1,0 +1,21 @@
+# Enable Dependabot version updates
+# https://docs.github.com/en/github/administering-a-repository/enabling-and-disabling-version-updates#enabling-dependabot-version-updates
+
+version: 2
+
+updates:
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: daily
+    labels:
+      - nuget
+      - dependencies
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    labels:
+      - github-actions
+      - dependencies
