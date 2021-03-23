@@ -15,18 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{02C514
 		.gitignore = .gitignore
 		global.json = global.json
 		nuget.config = nuget.config
+		lgtm.yml = lgtm.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6064EB79-B7F8-4846-BB32-F5E8660CE6BF}"
 	ProjectSection(SolutionItems) = preProject
 		docs\about-ldap-injection.md = docs\about-ldap-injection.md
 		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{34435884-B84F-45DF-8158-989815410B31}"
-	ProjectSection(SolutionItems) = preProject
-		build.sh = build.sh
-		lgtm.yml = lgtm.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{FCF52F1C-39FD-4742-A762-5F8B7C9FE821}"
@@ -40,14 +35,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4D111D3F-628D-4C7F-A7D4-D67A8AC3F20B}"
-ProjectSection(SolutionItems) = preProject
-	scripts\release.sh = scripts\release.sh
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		scripts\release.sh = scripts\release.sh
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{B2834315-C4D6-433F-A90D-B1D7229979D2}"
-ProjectSection(SolutionItems) = preProject
-	scripts\inc\_output.sh = scripts\inc\_output.sh
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		scripts\inc\_output.sh = scripts\inc\_output.sh
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
