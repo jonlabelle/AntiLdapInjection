@@ -9,7 +9,6 @@ on:
 jobs:
   update-dotnet-sdk:
     name: Update .NET SDK
-
     runs-on: ubuntu-latest
 
     steps:
@@ -20,3 +19,4 @@ jobs:
         uses: martincostello/update-dotnet-sdk@v1.1.2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+          labels: dependencies, dotnet-sdk
