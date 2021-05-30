@@ -14,9 +14,9 @@ set -u
 # This is causing it to fail
 set -o pipefail
 
-# shellcheck disable=SC2005,SC2034
+# shellcheck disable=SC2005,SC2034,SC2155
 readonly SCRIPTDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
-# shellcheck disable=SC2034
+# shellcheck disable=SC2034,SC2155
 readonly SCRIPTNAME="$(basename "${BASH_SOURCE[0]}")"
 
 
