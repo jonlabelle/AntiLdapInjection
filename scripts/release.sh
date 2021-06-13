@@ -213,6 +213,7 @@ function push_changes() {
     eval $invocation
 
     local failed
+    failed=false
 
     git push && git push --tags || failed=true
 
