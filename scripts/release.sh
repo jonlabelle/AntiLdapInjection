@@ -172,7 +172,7 @@ confirm_release() {
 
     if [ "$DRYRUN" = true ]; then
         _undo_changes
-        say "Dry run only : file changes have been undone; commit was not applied, tagged or pushed."
+        say "Dry run only. File changes have been undone; commit was not applied, tagged or pushed."
         exit 0
     fi
 
@@ -181,7 +181,7 @@ confirm_release() {
             say_verbose "Release was confirmed."
             return 0
         else
-            say_verbose "Release was not confirmed : file changes have not been committed, tagged or pushed."
+            say_verbose "Release was not confirmed. File changes have not been committed, tagged or pushed."
             exit 0
         fi
     fi
