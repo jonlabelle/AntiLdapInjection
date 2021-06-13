@@ -110,11 +110,11 @@ function ensure_branch_up_to_date() {
     return 0
 }
 
-function ensure_one_change_deletion() {
+function ensure_isolated_change() {
     # shellcheck disable=2154,2086
     eval $invocation
 
-    # ensure only one change/deletion for 'AntiLdapInjection.csproj' file
+    # ensure only one file changed, one insertion/deletion of 'AntiLdapInjection.csproj' file
 
     # shellcheck disable=SC2076
     if [[ ! $(git diff --stat) =~ "1 file changed, 1 insertion(+), 1 deletion(-)" ]]; then
@@ -307,7 +307,7 @@ ensure_release_branch
 ensure_clean_working_dir
 ensure_branch_up_to_date
 bump_version
-ensure_one_change_deletion
+ensure_isolated_change
 confirm_release
 commit_changes
 tag_commit
