@@ -41,7 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4D11
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{B2834315-C4D6-433F-A90D-B1D7229979D2}"
 	ProjectSection(SolutionItems) = preProject
-		scripts\inc\_output.sh = scripts\inc\_output.sh
+		scripts\inc\_util.sh = scripts\inc\_util.sh
 	EndProjectSection
 EndProject
 Global

@@ -111,16 +111,26 @@ function ensure_branch_up_to_date() {
     return 0
 }
 
+function ensure_one_change_deletion() {
+    # shellcheck disable=2154,2086
+    eval $invocation
+
+    # ensure only one change/deletion for 'AntiLdapInjection.csproj' file
+
+    # shellcheck disable=SC2076
+    if [[ ! $(git diff --stat) =~ "1 file changed, 1 insertion(+), 1 deletion(-)" ]]; then
+        say_err "expected '1 file changed, 1 insertion(+), 1 deletion(-)'. check git status and git diff."
+        exit 1
+    fi
+}
+
 function bump_version() {
     # shellcheck disable=2154,2086
     eval $invocation
 
-    local project project_file temp_file_template temp_project_file failed
+    local temp_file_template temp_project_file failed
 
-    project=AntiLdapInjection
-    project_file="src/$project/$project.csproj"
-
-    temp_file_template="${TMPDIR:-/tmp}/$project.XXXXXXXXX"
+    temp_file_template="${TMPDIR:-/tmp}/$PROJECT.XXXXXXXXX"
     temp_project_file="$(mktemp "$temp_file_template")"
 
     say_verbose "Temp project file path: $temp_project_file"
@@ -128,25 +138,29 @@ function bump_version() {
     failed=false
 
     # replace the existing .csproj version, with the new
-    sed -E s/'<Version>[0-9]+\.[0-9]+\.[0-9]+'/'<Version>'"$VERSION"''/ $project_file > "$temp_project_file" \
-        && mv "$temp_project_file" "$project_file" \
-        && grep -q "$VERSION" -C 1 "$project_file" \
+    sed -E s/'<Version>[0-9]+\.[0-9]+\.[0-9]+'/'<Version>'"$VERSION"''/ "$PROJECT_FILE" > "$temp_project_file" \
+        && mv "$temp_project_file" "$PROJECT_FILE" \
+        && grep -q "$VERSION" -C 1 "$PROJECT_FILE" \
         || failed=true
 
     rm -rf "$temp_project_file"
+    say_verbose "Temp project file removed: $temp_project_file"
 
     if [ "$failed" = true ]; then
         say_err "Bump version failed."
-        return 1
-    fi
-
-    if [ "$DRYRUN" = true ]; then
-        # reverts the change to .csproj file
-        git checkout -- "$project_file"
-        say_verbose "Reverted change to: $project_file"
+        exit 1
     fi
 
     return 0
+}
+
+function _undo_changes() {
+    # shellcheck disable=2154,2086
+    eval $invocation
+
+    # reverts the change to .csproj file
+    git checkout -- "$PROJECT_FILE"
+    say_verbose "Reverted changes to: $PROJECT_FILE"
 }
 
 confirm_release() {
@@ -154,25 +168,19 @@ confirm_release() {
     eval $invocation
 
     if [ "$DRYRUN" = true ]; then
-        say "Dry run only, changes will not be committed."
+        _undo_changes
+        say "Dry run only : file changes undone, no commit was applied, tagged and pushed."
         exit 0
     fi
 
     if [ "$CI" = false ]; then
-        while true; do
-            read -r -p "Ready to release 'v$VERSION'? (y/n): " yn
-            case ${yn} in
-                [Yy]*)
-                    break
-                    ;;
-                [NnQq]*)
-                    exit 0
-                    ;;
-                *)
-                    say_warning "Please answer [Y]es or [N]o"
-                    ;;
-            esac
-        done
+        if ask "Ready to release 'v$VERSION'?" Y; then
+            say_verbose "Release was confirmed."
+            return 0
+        else
+            say_verbose "Release not confirmed : file changes have not committed, tagged or pushed."
+            exit 0
+        fi
     fi
 }
 
@@ -229,9 +237,10 @@ function push_changes() {
 cd "${SCRIPTDIR}" && cd ..
 
 # shellcheck disable=SC1091
-. scripts/inc/_output.sh
+. scripts/inc/_util.sh
 
-# shellcheck disable=SC2034
+PROJECT=AntiLdapInjection
+PROJECT_FILE="src/$PROJECT/$PROJECT.csproj"
 VERBOSE=false
 CI=false
 DRYRUN=false
@@ -296,6 +305,7 @@ ensure_release_branch
 ensure_clean_working_dir
 ensure_branch_up_to_date
 bump_version
+ensure_one_change_deletion
 confirm_release
 commit_changes
 tag_commit
