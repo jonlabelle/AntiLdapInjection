@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-#
-# Release.sh
-#
-# Updates the project version and creates an isolated
-# commit and tag of the change.
-
 # Stop script on non-zero exit code
 set -e
 # Stop script if unbound variable found (use ${var:-} if intentional)
@@ -23,7 +17,12 @@ readonly SCRIPTNAME="$(basename "${BASH_SOURCE[0]}")"
 function show_usage() {
     echo "Usage: $SCRIPTNAME [OPTIONS ...] version"
     echo
-    echo "Make a release!"
+    echo "Updates the project version and creates an isolated commit; the "
+    echo "commit is then tagged and pushed to the remote/origin (GitHub)."
+    echo
+    echo "Upon successful execution of this script (and given the executor has "
+    echo "the appropriate permissions) the Continuous Deployment workflow "
+    echo "is triggered on GitHub, pushing the package to NuGet.org."
     echo
     echo "Options:"
     echo
