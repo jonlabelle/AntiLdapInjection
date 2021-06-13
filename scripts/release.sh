@@ -27,8 +27,8 @@ function show_usage() {
     echo "Options:"
     echo
     echo "  -v <VERSION>, --version <VERSION>   Semantic Version number for the release."
-    echo "  --current                           Shows the current version."
-    echo "  -ci, --ci                           Specify when running in continuous integration environments."
+    echo "  --show-current-version              Shows the latest version committed to the repository."
+    echo "  -ci, --ci                           Use if running in continuous integration environments."
     echo "                                      Will not prompt to confirm release."
     echo "  -n, --dry-run                       Bumps the version number, but doesn't commit/push changes."
     echo "  --verbose                           Display diagnostics information. Useful for debugging purposes."
@@ -79,7 +79,7 @@ function ensure_clean_working_dir() {
     return 0
 }
 
-function get_current_version() {
+function show_current_version() {
     # shellcheck disable=2154,2086
     eval $invocation
 
@@ -258,8 +258,8 @@ fi
 while [ $# -ne 0 ]; do
     name="$1"
     case "$name" in
-        --current)
-            get_current_version
+        --show-current-version)
+            show_current_version
             exit 0
             ;;
         -h | --help)
