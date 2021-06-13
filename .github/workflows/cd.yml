@@ -16,7 +16,7 @@ env:
 
 jobs:
   release:
-    name: Release
+    name: Push package to NuGet.org
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
 
