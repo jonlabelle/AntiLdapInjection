@@ -183,7 +183,7 @@ function commit_changes() {
     local failed
     failed=false
 
-    git commit -am "Bump to v$version" || failed=true
+    git commit -am "Bump to v$VERSION" || failed=true
     if [ "$failed" = true ]; then
         say_err "Commit changes failed."
         return 1
