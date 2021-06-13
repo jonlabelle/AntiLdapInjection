@@ -121,6 +121,8 @@ function ensure_one_change_deletion() {
     if [[ ! $(git diff --stat) =~ "1 file changed, 1 insertion(+), 1 deletion(-)" ]]; then
         say_err "expected '1 file changed, 1 insertion(+), 1 deletion(-)'. check git status and git diff."
         exit 1
+    else
+        return 0
     fi
 }
 
@@ -137,8 +139,9 @@ function bump_version() {
 
     failed=false
 
-    # replace the existing .csproj version, with the new
-    sed -E s/'<Version>[0-9]+\.[0-9]+\.[0-9]+'/'<Version>'"$VERSION"''/ "$PROJECT_FILE" > "$temp_project_file" \
+    # replace the existing .csproj version, with the new...
+    # shellcheck disable=SC2086
+    sed -E s/'<Version>[0-9]+\.[0-9]+\.[0-9]+'/'<Version>'"$VERSION"''/ $PROJECT_FILE > "$temp_project_file" \
         && mv "$temp_project_file" "$PROJECT_FILE" \
         && grep -q "$VERSION" -C 1 "$PROJECT_FILE" \
         || failed=true
