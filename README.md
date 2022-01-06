@@ -2,7 +2,7 @@
 
 [![CI build status](https://github.com/jonlabelle/AntiLdapInjection/workflows/ci/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Aci "CI build status")
 [![CD release status](https://github.com/jonlabelle/AntiLdapInjection/workflows/cd/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Acd "CD release status")
-[![Code Quality](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/code-quality.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/code-quality.yml "Code Quality")
+[![CodeQL Analysis](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/code-analysis.yml "CodeQL Analysis")
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/jonlabelle/AntiLdapInjection.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/jonlabelle/AntiLdapInjection/alerts/ "Total Alerts")
 [![Latest NuGet release](https://img.shields.io/nuget/vpre/AntiLdapInjection?color=blue&label=nuget&logo=nuget)](https://www.nuget.org/packages/AntiLdapInjection "Latest NuGet release")
 [![Total NuGet downloads](https://img.shields.io/nuget/dt/AntiLdapInjection?color=blue&label=downloads&logo=nuget)](https://www.nuget.org/stats/packages/AntiLdapInjection?groupby=Version&groupby=ClientName&groupby=ClientVersion "Total NuGet downloads")
