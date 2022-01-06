@@ -59,8 +59,8 @@ function ensure_release_branch() {
 
     branch=$(git rev-parse --abbrev-ref HEAD)
 
-    if [ "$branch" != "master" ]; then
-        say_err "You must be on the master branch to make a release."
+    if [ "$branch" != "main" ]; then
+        say_err "You must be on the main branch to make a release."
         return 1
     fi
 
@@ -99,8 +99,8 @@ function ensure_branch_up_to_date() {
 
     # ref: https://stackoverflow.com/a/15119807
 
-    local_hash="$(git rev-parse --verify origin/master)"
-    remote_hash="$(git ls-remote origin master | cut -d$'\t' -f 1)"
+    local_hash="$(git rev-parse --verify origin/main)"
+    remote_hash="$(git ls-remote origin main | cut -d$'\t' -f 1)"
 
     if [ "$local_hash" != "$remote_hash" ]; then
         say_err "Git local/remote histories differ. Update your local branch first."
