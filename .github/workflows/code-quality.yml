@@ -36,7 +36,7 @@ jobs:
           languages: ${{ matrix.language }}
 
       - name: Build net5.0 targets
-        run: dotnet build --framework net5.0
+        run: dotnet build --framework net6.0
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
