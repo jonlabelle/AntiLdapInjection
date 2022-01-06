@@ -6,7 +6,9 @@ on:
       - "[0-9]+.[0-9]+.[0-9]+"
     paths:
       - "src/AntiLdapInjection/AntiLdapInjection.csproj"
-
+  release:
+    types:
+      - created
   workflow_dispatch:
 
 env:
@@ -37,7 +39,7 @@ jobs:
         run: dotnet test --no-build --configuration Release --verbosity normal
 
       - name: Create NuGet packages
-        run: dotnet pack src/AntiLdapInjection/AntiLdapInjection.csproj --output artifacts/nuget-packages --configuration Release
+        run: dotnet pack src/AntiLdapInjection/AntiLdapInjection.csproj --output artifacts/nuget-packages --configuration Release --no-build
 
       - name: Push NuGet packages
-        run: dotnet nuget push "artifacts/nuget-packages/*.*" --api-key ${{secrets.NUGET_API_KEY }} --skip-duplicate
+        run: dotnet nuget push "artifacts/nuget-packages/*.*" --api-key ${{secrets.NUGET_API_KEY }} --skip-duplicate --source https://api.nuget.org/v3/index.json
