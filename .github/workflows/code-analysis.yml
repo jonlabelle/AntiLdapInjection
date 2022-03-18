@@ -41,8 +41,8 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore --verbosity normal
 
-      - name: Build net${{ env.DOTNET_GLOBAL_VERSION }} targets
-        run: dotnet build --no-restore --framework net${{ env.DOTNET_GLOBAL_VERSION }} /p:UseSharedCompilation=false
+      - name: Build ${{ env.DOTNET_GLOBAL_VERSION }} targets
+        run: dotnet build --no-restore --framework ${{ env.DOTNET_GLOBAL_VERSION }} /p:UseSharedCompilation=false
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
