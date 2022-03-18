@@ -27,6 +27,9 @@ jobs:
       - name: Checkout Git repository
         uses: actions/checkout@v3
 
+      - name: Inject target dotnet version into environment
+        run: echo "DOTNET_GLOBAL_VERSION=net$(cat global.json | jq --raw-output '.sdk.version' | cut -c1-3)" >> $GITHUB_ENV
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
 
@@ -35,8 +38,11 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Build net5.0 targets
-        run: dotnet build --framework net6.0
+      - name: Restore dependencies
+        run: dotnet restore --verbosity normal
+
+      - name: Build net${{ env.DOTNET_GLOBAL_VERSION }} targets
+        run: dotnet build --no-restore --framework net${{ env.DOTNET_GLOBAL_VERSION }} /p:UseSharedCompilation=false
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
