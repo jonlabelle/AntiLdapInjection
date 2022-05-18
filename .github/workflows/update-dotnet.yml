@@ -16,7 +16,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run Update .NET SDK
-        uses: martincostello/update-dotnet-sdk@v1.1.7
+        uses: martincostello/update-dotnet-sdk@v1
         with:
+          channel: 6.0
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           labels: dependencies,dotnet-sdk
