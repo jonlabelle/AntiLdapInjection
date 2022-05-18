@@ -18,8 +18,14 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <!-- SourceLink (https://github.com/dotnet/sourcelink/blob/master/README.md) -->
+    <!-- SourceLink (https://devblogs.microsoft.com/dotnet/producing-packages-with-source-link/) -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <!-- SourceLink (https://devblogs.microsoft.com/dotnet/producing-packages-with-source-link/) -->
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -41,7 +47,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!-- SourceLink (https://github.com/dotnet/sourcelink/blob/master/README.md) -->
+    <!-- SourceLink (https://devblogs.microsoft.com/dotnet/producing-packages-with-source-link/) -->
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
   </ItemGroup>
 
