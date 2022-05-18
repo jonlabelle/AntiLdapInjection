@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1;netstandard2.0;net45;net452;net46;net472;net5.0;net6.0</TargetFrameworks>
+    <TargetFramework>netstandard1.1</TargetFramework>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <Version>1.1.0</Version>
     <Title>AntiLdapInjection</Title>
     <Description>Provides protections against LDAP Injection.</Description>
     <Authors>Jon LaBelle</Authors>
-    <Copyright>Copyright (c) 2022 Jon LaBelle, MIT License (MIT)</Copyright>
+    <Copyright>Copyright (c) Jon LaBelle, MIT License (MIT)</Copyright>
     <PackageTags>ldap ldap-injection security active-directory security encode sanitize library antixss</PackageTags>
     <PackageProjectUrl>https://github.com/jonlabelle/AntiLdapInjection</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/jonlabelle/AntiLdapInjection</PackageReleaseNotes>
