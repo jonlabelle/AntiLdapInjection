@@ -38,7 +38,7 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore --verbosity normal
 
-      - name: Build ${{ env.TARGET_FRAMEWORK }} targets
+      - name: Build
         run: dotnet build --no-restore /p:UseSharedCompilation=false
 
       - name: Perform CodeQL Analysis
