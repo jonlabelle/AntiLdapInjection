@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.1</TargetFramework>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Title>AntiLdapInjection</Title>
     <Description>Provides protections against LDAP Injection.</Description>
     <Authors>Jon LaBelle</Authors>
