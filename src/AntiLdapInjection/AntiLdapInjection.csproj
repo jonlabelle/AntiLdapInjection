@@ -11,8 +11,8 @@
     <PackageTags>ldap ldap-injection security active-directory security encode sanitize library antixss</PackageTags>
     <PackageProjectUrl>https://github.com/jonlabelle/AntiLdapInjection</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/jonlabelle/AntiLdapInjection</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/jonlabelle/AntiLdapInjection.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>https://github.com/jonlabelle/AntiLdapInjection</RepositoryUrl>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
