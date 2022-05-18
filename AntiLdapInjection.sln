@@ -30,8 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\cd.yml = .github\workflows\cd.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
-		.github\workflows\code-quality.yml = .github\workflows\code-quality.yml
-		.github\workflows\update-dotnet-sdk.yml = .github\workflows\update-dotnet-sdk.yml
+		.github\workflows\code-analysis.yml = .github\workflows\code-analysis.yml
+		.github\workflows\update-dotnet.yml = .github\workflows\update-dotnet.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4D111D3F-628D-4C7F-A7D4-D67A8AC3F20B}"
