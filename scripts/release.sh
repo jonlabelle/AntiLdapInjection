@@ -224,8 +224,8 @@ function push_changes() {
     local failed
     failed=false
 
-    git push origin \
-        && git push orgin "$VERSION" || failed=true
+    git push origin "$RELEASE_BRANCH" \
+        && git push origin "$VERSION" || failed=true
 
     if [ "$failed" = true ]; then
         say_err "Push changes failed."
