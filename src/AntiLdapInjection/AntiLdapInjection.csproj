@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFrameworks>netstandard1.6;netstandard2.0;netstandard2.1</TargetFrameworks>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <Version>1.1.2</Version>
+    <Version>1.1.3</Version>
     <Title>AntiLdapInjection</Title>
     <Description>Provides protections against LDAP Injection.</Description>
     <Authors>Jon LaBelle</Authors>
