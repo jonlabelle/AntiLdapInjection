@@ -22,7 +22,7 @@ function show_usage() {
     echo
     echo "Upon successful execution of this script (and given the executor has "
     echo "the appropriate permissions) the Continuous Deployment workflow "
-    echo "is triggered on GitHub, pushing the package to NuGet.org."
+    echo "is triggered and publishes the package to NuGet.org."
     echo
     echo "Options:"
     echo
@@ -55,12 +55,12 @@ function ensure_release_branch() {
     # shellcheck disable=2154,2086
     eval $invocation
 
-    local branch
+    local current_branch
 
-    branch=$(git rev-parse --abbrev-ref HEAD)
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-    if [ "$branch" != "main" ]; then
-        say_err "You must be on the main branch to make a release."
+    if [ "$current_branch" != "$RELEASE_BRANCH" ]; then
+        say_err "You must be on the $RELEASE_BRANCH branch to make a release."
         return 1
     fi
 
@@ -98,9 +98,8 @@ function ensure_branch_up_to_date() {
     local local_hash remote_hash
 
     # ref: https://stackoverflow.com/a/15119807
-
-    local_hash="$(git rev-parse --verify origin/main)"
-    remote_hash="$(git ls-remote origin main | cut -d$'\t' -f 1)"
+    local_hash="$(git rev-parse --verify "origin/${RELEASE_BRANCH}")"
+    remote_hash="$(git ls-remote origin "$RELEASE_BRANCH" | cut -d$'\t' -f 1)"
 
     if [ "$local_hash" != "$remote_hash" ]; then
         say_err "Git local/remote histories differ. Update your local branch first."
@@ -225,7 +224,8 @@ function push_changes() {
     local failed
     failed=false
 
-    git push && git push --tags || failed=true
+    git push origin \
+        && git push orgin "$VERSION" || failed=true
 
     if [ "$failed" = true ]; then
         say_err "Push changes failed."
@@ -241,7 +241,9 @@ cd "${SCRIPTDIR}" && cd ..
 # shellcheck disable=SC1091
 . scripts/inc/_util.sh
 
-PROJECT=AntiLdapInjection
+readonly RELEASE_BRANCH=main
+readonly PROJECT=AntiLdapInjection
+
 PROJECT_FILE="src/$PROJECT/$PROJECT.csproj"
 VERBOSE=false
 CI=false
