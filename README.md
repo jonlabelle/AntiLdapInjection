@@ -1,6 +1,6 @@
 # Anti-LDAP Injection
 
-[![NuGet package](https://buildstats.info/nuget/dotenv.net)](https://www.nuget.org/packages/AntiLdapInjection "NuGet package")
+[![NuGet package](https://buildstats.info/nuget/AntiLdapInjection)](https://www.nuget.org/packages/AntiLdapInjection "NuGet package")
 [![CI build status](https://github.com/jonlabelle/AntiLdapInjection/workflows/ci/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Aci "CI build status")
 [![CD release status](https://github.com/jonlabelle/AntiLdapInjection/workflows/cd/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions?query=workflow%3Acd "CD release status")
 [![CodeQL Analysis](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/code-analysis.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/code-analysis.yml "CodeQL Analysis")
