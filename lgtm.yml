@@ -1,6 +1,0 @@
-# LGTM code analysis project configuration file
-# https://lgtm.com/help/lgtm/lgtm.yml-configuration-file
-extraction:
-  csharp:
-    index:
-      dotnet:
