@@ -25,13 +25,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6064EB79-B
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{FCF52F1C-39FD-4742-A762-5F8B7C9FE821}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{C4E3CA17-AC4C-4F2A-8780-3D3069197298}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\cd.yml = .github\workflows\cd.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		.github\workflows\code-analysis.yml = .github\workflows\code-analysis.yml
-		.github\workflows\update-dotnet.yml = .github\workflows\update-dotnet.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4D111D3F-628D-4C7F-A7D4-D67A8AC3F20B}"
