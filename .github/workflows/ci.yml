@@ -46,7 +46,7 @@ jobs:
           dotnet test --configuration Release --verbosity minimal --no-build
 
   analyze:
-    name: Code analysis
+    name: code analysis
     runs-on: ubuntu-latest
     permissions:
       actions: read
