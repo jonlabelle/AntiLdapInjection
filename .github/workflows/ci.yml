@@ -4,15 +4,15 @@ on:
   push:
     branches: [main]
     tags-ignore:
-      - "*"
+      - '*'
   pull_request:
     branches: [main]
     tags-ignore:
-      - "*"
+      - '*'
     paths-ignore:
-      - "*.md"
-      - ".editorconfig"
-      - "docs/**"
+      - '**.md'
+      - '.editorconfig'
+      - 'docs/**'
   workflow_dispatch:
 
 env:
@@ -37,7 +37,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "7.0.x"
+          global-json-file: global.json
 
       - name: Build and test
         run: |
