@@ -32,10 +32,10 @@ jobs:
 
     steps:
       - name: Checkout Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@main
         with:
           global-json-file: global.json
 
@@ -60,15 +60,15 @@ jobs:
 
     steps:
       - name: Checkout Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@main
         with:
           global-json-file: global.json
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        uses: github/codeql-action/init@main
         with:
           languages: ${{ matrix.language }}
 
@@ -79,7 +79,7 @@ jobs:
         run: dotnet build --no-restore /p:UseSharedCompilation=false
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@main
 
   dev-skim:
     name: dev skim analysis
