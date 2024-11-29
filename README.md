@@ -1,6 +1,7 @@
 # Anti-LDAP Injection
 
-[![nuget package](https://buildstats.info/nuget/AntiLdapInjection)](https://www.nuget.org/packages/AntiLdapInjection "nuget package")
+[![nuget package](https://img.shields.io/nuget/dt/AntiLdapInjection?color=blue)](https://www.nuget.org/packages/AntiLdapInjection "nuget package")
+[![nuget version](https://img.shields.io/nuget/v/AntiLdapInjection)](https://www.nuget.org/packages/AntiLdapInjection "nuget version")
 [![ci build status](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/ci.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/ci.yml "ci build status")
 [![cd release status](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/cd.yml "cd release status")
 
