@@ -15,7 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{02C514
 		.gitignore = .gitignore
 		global.json = global.json
 		nuget.config = nuget.config
-		lgtm.yml = lgtm.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{6064EB79-B7F8-4846-BB32-F5E8660CE6BF}"
@@ -33,7 +32,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\cd.yml = .github\workflows\cd.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
-		.github\workflows\code-analysis.yml = .github\workflows\code-analysis.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{4D111D3F-628D-4C7F-A7D4-D67A8AC3F20B}"
@@ -44,6 +42,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{B2834315-C4D6-433F-A90D-B1D7229979D2}"
 	ProjectSection(SolutionItems) = preProject
 		scripts\inc\_util.sh = scripts\inc\_util.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{03A53135-CDBC-4F62-AFCF-71EBAB4D218A}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\bug_report.md = .github\ISSUE_TEMPLATE\bug_report.md
 	EndProjectSection
 EndProject
 Global
@@ -66,5 +69,6 @@ Global
 		{30114A8D-205B-463C-99FC-70FCA2A485FF} = {5C009682-9244-46FB-A4C6-E17CD9C0F521}
 		{C4E3CA17-AC4C-4F2A-8780-3D3069197298} = {FCF52F1C-39FD-4742-A762-5F8B7C9FE821}
 		{B2834315-C4D6-433F-A90D-B1D7229979D2} = {4D111D3F-628D-4C7F-A7D4-D67A8AC3F20B}
+		{03A53135-CDBC-4F62-AFCF-71EBAB4D218A} = {FCF52F1C-39FD-4742-A762-5F8B7C9FE821}
 	EndGlobalSection
 EndGlobal
