@@ -1,13 +1,13 @@
 # Anti-LDAP Injection
 
-[![nuget package](https://buildstats.info/nuget/AntiLdapInjection)](https://www.nuget.org/packages/AntiLdapInjection 'nuget package')
-[![ci build status](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/ci.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/ci.yml 'ci build status')
-[![cd release status](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/cd.yml 'cd release status')
+[![nuget package](https://buildstats.info/nuget/AntiLdapInjection)](https://www.nuget.org/packages/AntiLdapInjection "nuget package")
+[![ci build status](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/ci.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/ci.yml "ci build status")
+[![cd release status](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/cd.yml/badge.svg)](https://github.com/jonlabelle/AntiLdapInjection/actions/workflows/cd.yml "cd release status")
 
-A .NET library that provides protections against LDAP Injection.
+A .NET library that provides protections against [LDAP Injection](https://owasp.org/www-community/attacks/LDAP_Injection), a type of attack that can manipulate LDAP queries to access unauthorized information or perform unauthorized actions.
 
-> Most of the of the code was extracted from Microsoft's AntiXss library
-> LDAP Encoder, which is no longer maintained.
+> [!NOTE]  
+> Most of the code was extracted from Microsoft's AntiXss library LDAP Encoder, which is no longer maintained.
 
 ## Installation
 
@@ -31,9 +31,7 @@ See [NuGet page] for additional installation options.
 
 ### FilterEncode
 
-`FilterEncode` encodes input according to [RFC 4515](https://tools.ietf.org/html/rfc4515),
-where unsafe values are converted to `\XX` \(`XX` is the representation of the
-unsafe character\).
+`FilterEncode` encodes input according to [RFC 4515](https://tools.ietf.org/html/rfc4515), where unsafe values are converted to `\XX` \(`XX` is the representation of the unsafe character\).
 
 ```csharp
 LdapEncoder.FilterEncode(string filterToEncode)
@@ -42,7 +40,7 @@ LdapEncoder.FilterEncode(string filterToEncode)
 #### FilterEncode encoding chart
 
 | Character | Encoded |
-|-----------|---------|
+| --------- | ------- |
 | `(`       | `\28`   |
 | `)`       | `\29`   |
 | `\`       | `\5c`   |
@@ -104,7 +102,7 @@ LdapEncoder.DistinguishedNameEncode(string distinguishedNameToEncode)
 ```
 
 You have the option to turn off initial or final character escaping rules. For
-example, if you are concatenating a escaped distinguished name fragment into the
+example, if you are concatenating an escaped distinguished name fragment into the
 midst of a complete distinguished name.
 
 ```csharp
@@ -207,9 +205,9 @@ prevent LDAP injection attacks.
 ## Other noteworthy .NET LDAP-related libraries
 
 - **LdapForNet:** Cross platform port of OpenLdap Client library and Windows LDAP to .NET Core
-    - \[ [NuGet](https://www.nuget.org/packages/LdapForNet) \] \[ [GitHub](https://github.com/flamencist/ldap4net) \]
+  - [NuGet](https://www.nuget.org/packages/LdapForNet) [GitHub](https://github.com/flamencist/ldap4net)
 - **Linq2Ldap:** Wrapper around System.DirectoryServices using LINQ Expressions as LDAP filters
-    - \[ [NuGet](https://www.nuget.org/packages/Linq2Ldap) \] \[ [GitHub](https://github.com/cdibbs/linq2ldap) \]
+  - [NuGet](https://www.nuget.org/packages/Linq2Ldap) [GitHub](https://github.com/cdibbs/linq2ldap)
 
 [Web Application Security Consortium: LDAP Injection]: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 [NuGet]: https://www.nuget.org/packages/AntiLdapInjection
