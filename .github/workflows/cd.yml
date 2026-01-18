@@ -3,9 +3,9 @@ name: cd
 on:
   push:
     tags:
-      - '[0-9]+.[0-9]+.[0-9]+'
+      - "[0-9]+.[0-9]+.[0-9]+"
     paths:
-      - 'src/AntiLdapInjection/AntiLdapInjection.csproj'
+      - "src/AntiLdapInjection/AntiLdapInjection.csproj"
   release:
     types:
       - created
@@ -40,8 +40,14 @@ jobs:
       - name: Run tests
         run: dotnet test --no-build --configuration Release --verbosity normal
 
+      - name: NuGet login
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ secrets.NUGET_USER }}
+
       - name: Create NuGet packages
         run: dotnet pack src/AntiLdapInjection/AntiLdapInjection.csproj --output artifacts/nuget-packages --configuration Release --no-build
 
       - name: Push NuGet packages
-        run: dotnet nuget push "artifacts/nuget-packages/*.*" --api-key ${{secrets.NUGET_API_KEY }} --skip-duplicate --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push artifacts/nuget-packages/*.* --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
