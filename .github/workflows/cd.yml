@@ -54,4 +54,4 @@ jobs:
         run: dotnet pack src/AntiLdapInjection/AntiLdapInjection.csproj --output artifacts/nuget-packages --configuration Release --no-build
 
       - name: Push NuGet packages
-        run: dotnet nuget push artifacts/nuget-packages/*.* --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push artifacts/nuget-packages/*.* --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
