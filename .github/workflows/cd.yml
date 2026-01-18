@@ -21,6 +21,9 @@ jobs:
     name: Push package to NuGet.org
     if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout Git repository
