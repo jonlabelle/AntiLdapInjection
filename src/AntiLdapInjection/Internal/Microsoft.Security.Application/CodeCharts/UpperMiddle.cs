@@ -251,8 +251,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable CyrillicExtendedB()
         {
-            return CodeChartHelper.GetRange(42560, 42647,
-                (int i) => i == 42592 || i == 42593 || (i >= 42612 && i <= 42619));
+            return CodeChartHelper.GetRange(
+                42560,
+                42647,
+                (int i) => i == 42592 || i == 42593 || (i >= 42612 && i <= 42619)
+            );
         }
 
         /// <summary>
@@ -279,7 +282,9 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable LatinExtendedD()
         {
-            return CodeChartHelper.GetRange(42784, 42892).Concat(CodeChartHelper.GetRange(43003, 43007));
+            return CodeChartHelper
+                .GetRange(42784, 42892)
+                .Concat(CodeChartHelper.GetRange(43003, 43007));
         }
 
         /// <summary>

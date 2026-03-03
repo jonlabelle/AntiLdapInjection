@@ -162,6 +162,6 @@ namespace AntiLdapInjection
         /// The Specials code table.
         /// </summary>
         /// <remarks>https://www.unicode.org/charts/PDF/UFFF0.pdf</remarks>
-        Specials = 0x200000
+        Specials = 0x200000,
     }
 }

@@ -216,6 +216,6 @@ namespace AntiLdapInjection
         /// The Saurashtra code table.
         /// </summary>
         /// <remarks>https://www.unicode.org/charts/PDF/UA880.pdf</remarks>
-        Saurashtra = 0x40000000
+        Saurashtra = 0x40000000,
     }
 }

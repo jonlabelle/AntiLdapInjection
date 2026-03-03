@@ -221,6 +221,6 @@ namespace AntiLdapInjection
         /// <summary>
         /// The default code tables marked as safe on initialisation.
         /// </summary>
-        Default = 0x7F
+        Default = 0x7F,
     }
 }

@@ -62,10 +62,7 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Rejang()
         {
-            return CodeChartHelper.GetRange(43312, 43347).Concat(new int[1]
-            {
-                43359
-            });
+            return CodeChartHelper.GetRange(43312, 43347).Concat(new int[1] { 43359 });
         }
 
         /// <summary>
@@ -83,7 +80,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Javanese()
         {
-            return CodeChartHelper.GetRange(43392, 43487, (int i) => i == 43470 || (i >= 43482 && i <= 43485));
+            return CodeChartHelper.GetRange(
+                43392,
+                43487,
+                (int i) => i == 43470 || (i >= 43482 && i <= 43485)
+            );
         }
 
         /// <summary>
@@ -92,8 +93,16 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Cham()
         {
-            return CodeChartHelper.GetRange(43520, 43615,
-                (int i) => (i >= 43575 && i <= 43583) || i == 43598 || i == 43599 || i == 43610 || i == 43611);
+            return CodeChartHelper.GetRange(
+                43520,
+                43615,
+                (int i) =>
+                    (i >= 43575 && i <= 43583)
+                    || i == 43598
+                    || i == 43599
+                    || i == 43610
+                    || i == 43611
+            );
         }
 
         /// <summary>
@@ -111,7 +120,9 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable TaiViet()
         {
-            return CodeChartHelper.GetRange(43648, 43714).Concat(CodeChartHelper.GetRange(43739, 43743));
+            return CodeChartHelper
+                .GetRange(43648, 43714)
+                .Concat(CodeChartHelper.GetRange(43739, 43743));
         }
 
         /// <summary>
@@ -138,8 +149,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable HangulJamoExtendedB()
         {
-            return CodeChartHelper.GetRange(55216, 55291,
-                (int i) => i == 55239 || i == 55240 || i == 55241 || i == 55242);
+            return CodeChartHelper.GetRange(
+                55216,
+                55291,
+                (int i) => i == 55239 || i == 55240 || i == 55241 || i == 55242
+            );
         }
 
         /// <summary>
@@ -148,8 +162,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable CjkCompatibilityIdeographs()
         {
-            return CodeChartHelper.GetRange(63744, 64217,
-                (int i) => i == 64046 || i == 64047 || i == 64110 || i == 64111);
+            return CodeChartHelper.GetRange(
+                63744,
+                64217,
+                (int i) => i == 64046 || i == 64047 || i == 64110 || i == 64111
+            );
         }
 
         /// <summary>
@@ -158,9 +175,18 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable AlphabeticPresentationForms()
         {
-            return CodeChartHelper.GetRange(64256, 64335,
-                (int i) => (i >= 64263 && i <= 64274) || (i >= 64280 && i <= 64284) || i == 64311 || i == 64317 ||
-                           i == 64319 || i == 64322 || i == 64325);
+            return CodeChartHelper.GetRange(
+                64256,
+                64335,
+                (int i) =>
+                    (i >= 64263 && i <= 64274)
+                    || (i >= 64280 && i <= 64284)
+                    || i == 64311
+                    || i == 64317
+                    || i == 64319
+                    || i == 64322
+                    || i == 64325
+            );
         }
 
         /// <summary>
@@ -169,9 +195,16 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable ArabicPresentationFormsA()
         {
-            return CodeChartHelper.GetRange(64336, 65021,
-                (int i) => (i >= 64434 && i <= 64466) || (i >= 64832 && i <= 64847) || i == 64912 || i == 64913 ||
-                           (i >= 64968 && i <= 65007));
+            return CodeChartHelper.GetRange(
+                64336,
+                65021,
+                (int i) =>
+                    (i >= 64434 && i <= 64466)
+                    || (i >= 64832 && i <= 64847)
+                    || i == 64912
+                    || i == 64913
+                    || (i >= 64968 && i <= 65007)
+            );
         }
 
         /// <summary>
@@ -234,10 +267,24 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable HalfWidthAndFullWidthForms()
         {
-            return CodeChartHelper.GetRange(65281, 65518,
-                (int i) => i == 65471 || i == 65472 || i == 65473 || i == 65480 || i == 65481 || i == 65488 ||
-                           i == 65489 || i == 65496 || i == 65497 || i == 65501 || i == 65502 || i == 65503 ||
-                           i == 65511);
+            return CodeChartHelper.GetRange(
+                65281,
+                65518,
+                (int i) =>
+                    i == 65471
+                    || i == 65472
+                    || i == 65473
+                    || i == 65480
+                    || i == 65481
+                    || i == 65488
+                    || i == 65489
+                    || i == 65496
+                    || i == 65497
+                    || i == 65501
+                    || i == 65502
+                    || i == 65503
+                    || i == 65511
+            );
         }
 
         /// <summary>

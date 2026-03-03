@@ -136,7 +136,9 @@ namespace AntiLdapInjection
         /// </remarks>
         internal static char[] HashThenHexValueGenerator(int value)
         {
-            return StringToCharArrayWithHashPrefix(value.ToString("X2", CultureInfo.InvariantCulture));
+            return StringToCharArrayWithHashPrefix(
+                value.ToString("X2", CultureInfo.InvariantCulture)
+            );
         }
 
         /// <summary>
@@ -154,7 +156,9 @@ namespace AntiLdapInjection
         /// </remarks>
         internal static char[] PercentThenHexValueGenerator(int value)
         {
-            return StringToCharArrayWithPercentPrefix(value.ToString("x2", CultureInfo.InvariantCulture));
+            return StringToCharArrayWithPercentPrefix(
+                value.ToString("x2", CultureInfo.InvariantCulture)
+            );
         }
 
         /// <summary>
@@ -172,7 +176,9 @@ namespace AntiLdapInjection
         /// </remarks>
         internal static char[] SlashThenHexValueGenerator(int value)
         {
-            return StringToCharArrayWithSlashPrefix(value.ToString("x2", CultureInfo.InvariantCulture));
+            return StringToCharArrayWithSlashPrefix(
+                value.ToString("x2", CultureInfo.InvariantCulture)
+            );
         }
 
         /// <summary>
@@ -447,7 +453,11 @@ namespace AntiLdapInjection
         /// <param name="safeList">The safe list to punch through.</param>
         /// <param name="needed">Value indicating whether the holes should be punched.</param>
         /// <param name="whiteListedCharacters">The list of character positions to punch.</param>
-        private static void PunchHolesIfNeeded(ref char[][] safeList, bool needed, IEnumerable whiteListedCharacters)
+        private static void PunchHolesIfNeeded(
+            ref char[][] safeList,
+            bool needed,
+            IEnumerable whiteListedCharacters
+        )
         {
             if (needed)
             {

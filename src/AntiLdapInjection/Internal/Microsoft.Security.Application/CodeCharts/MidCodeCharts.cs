@@ -216,6 +216,6 @@ namespace AntiLdapInjection
         /// The Ethiopic Extended code table.
         /// </summary>
         /// <remarks>https://www.unicode.org/charts/PDF/U2D80.pdf</remarks>
-        EthiopicExtended = 0x4000
+        EthiopicExtended = 0x4000,
     }
 }

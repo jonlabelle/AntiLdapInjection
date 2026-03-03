@@ -22,7 +22,7 @@ namespace AntiLdapInjection
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    
+
     /// <summary>
     /// Helper functions to simplify range/safe enumerations.
     /// </summary>
@@ -35,7 +35,11 @@ namespace AntiLdapInjection
         /// <param name="max">The finishing number.</param>
         /// <param name="exclusionFilter">A function returning true for any number to be excluded.</param>
         /// <returns>An enumerable collection of integers starting at <paramref name="min" /> and ending at <paramref name="max" />, with any exclusions specified.</returns>
-        internal static IEnumerable<int> GetRange(int min, int max, Func<int, bool> exclusionFilter = null)
+        internal static IEnumerable<int> GetRange(
+            int min,
+            int max,
+            Func<int, bool> exclusionFilter = null
+        )
         {
             var enumerable = Enumerable.Range(min, max - min + 1);
 

@@ -34,13 +34,15 @@ namespace AntiLdapInjection
         /// <summary>
         /// The values to output for each character when filter encoding.
         /// </summary>
-        private static readonly Lazy<char[][]> FilterCharacterValuesLazy = new Lazy<char[][]>(InitialiseFilterSafeList);
+        private static readonly Lazy<char[][]> FilterCharacterValuesLazy = new Lazy<char[][]>(
+            InitializeFilterSafeList
+        );
 
         /// <summary>
         /// The values to output for each character when DN encoding.
         /// </summary>
         private static readonly Lazy<char[][]> DistinguishedNameCharacterValuesLazy =
-            new Lazy<char[][]>(InitialiseDistinguishedNameSafeList);
+            new Lazy<char[][]>(InitializeDistinguishedNameSafeList);
 
         /// <summary>
         /// Encodes the input string for use in LDAP filters.
@@ -143,7 +145,7 @@ namespace AntiLdapInjection
         /// Initializes the LDAP filter safe list.
         /// </summary>
         /// <returns>The LDAP filter safe list.</returns>
-        private static char[][] InitialiseFilterSafeList()
+        private static char[][] InitializeFilterSafeList()
         {
             var safeList = SafeList.Generate(255, SafeList.SlashThenHexValueGenerator);
 
@@ -172,7 +174,7 @@ namespace AntiLdapInjection
         /// Initializes the LDAP DN safe lists.
         /// </summary>
         /// <returns>The DN safe list.</returns>
-        private static char[][] InitialiseDistinguishedNameSafeList()
+        private static char[][] InitializeDistinguishedNameSafeList()
         {
             var safeList = SafeList.Generate(255, SafeList.HashThenHexValueGenerator);
 
@@ -199,13 +201,19 @@ namespace AntiLdapInjection
             for (var i = 32; i <= 126; i++)
             {
                 if (
-                    i != 44 && i != 43 &&
-                    i != 34 && i != 92 &&
-                    i != 60 && i != 62 &&
-                    i != 38 && i != 33 &&
-                    i != 124 && i != 61 &&
-                    i != 45 && i != 39 &&
-                    i != 59
+                    i != 44
+                    && i != 43
+                    && i != 34
+                    && i != 92
+                    && i != 60
+                    && i != 62
+                    && i != 38
+                    && i != 33
+                    && i != 124
+                    && i != 61
+                    && i != 45
+                    && i != 39
+                    && i != 59
                 )
                 {
                     yield return i;

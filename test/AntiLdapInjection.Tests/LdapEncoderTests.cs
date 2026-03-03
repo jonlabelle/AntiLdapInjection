@@ -265,8 +265,7 @@ public class LdapEncoderTests
     /// Tests that the override of initial character handling works with hashes.
     /// </summary>
     [Fact]
-    public void
-        PassingAHashAtTheBeginningOfAStringToDistinguishedNameEncodeButOverridingTheInitialRulesDoesNotEncodeTheHash()
+    public void PassingAHashAtTheBeginningOfAStringToDistinguishedNameEncodeButOverridingTheInitialRulesDoesNotEncodeTheHash()
     {
         const string target = "##abcdef";
         const string expected = "##abcdef";
@@ -280,8 +279,7 @@ public class LdapEncoderTests
     /// Tests that the override of initial character handling works with space.
     /// </summary>
     [Fact]
-    public void
-        PassingASpaceAtTheBeginningOfAStringToDistinguishedNameEncodeButOverridingTheInitialRulesDoesNotEncodeTheSpace()
+    public void PassingASpaceAtTheBeginningOfAStringToDistinguishedNameEncodeButOverridingTheInitialRulesDoesNotEncodeTheSpace()
     {
         const string target = "  abcdef";
         const string expected = "  abcdef";
@@ -295,8 +293,7 @@ public class LdapEncoderTests
     /// Tests that the override of final character handling works with hashes.
     /// </summary>
     [Fact]
-    public void
-        PassingASpaceAtTheEndOfAStringToDistinguishedNameEncodeButOverridingTheFinalRuleDoesNotEncodeTheSpace()
+    public void PassingASpaceAtTheEndOfAStringToDistinguishedNameEncodeButOverridingTheFinalRuleDoesNotEncodeTheSpace()
     {
         const string target = "abcdef# ";
         const string expected = "abcdef# ";

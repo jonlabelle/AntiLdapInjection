@@ -43,12 +43,33 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable GreekExtended()
         {
-            return CodeChartHelper.GetRange(7936, 8190,
+            return CodeChartHelper.GetRange(
+                7936,
+                8190,
                 (int i) =>
-                    i == 7958 || i == 7959 || i == 7966 || i == 7967 || i == 8006 || i == 8007 || i == 8014 ||
-                    i == 8015 || i == 8024 || i == 8026 || i == 8028 || i == 8030 || i == 8062 || i == 8063 ||
-                    i == 8117 || i == 8133 || i == 8148 || i == 8149 || i == 8156 || i == 8176 || i == 8177 ||
-                    i == 8181);
+                    i == 7958
+                    || i == 7959
+                    || i == 7966
+                    || i == 7967
+                    || i == 8006
+                    || i == 8007
+                    || i == 8014
+                    || i == 8015
+                    || i == 8024
+                    || i == 8026
+                    || i == 8028
+                    || i == 8030
+                    || i == 8062
+                    || i == 8063
+                    || i == 8117
+                    || i == 8133
+                    || i == 8148
+                    || i == 8149
+                    || i == 8156
+                    || i == 8176
+                    || i == 8177
+                    || i == 8181
+            );
         }
 
         /// <summary>
@@ -66,7 +87,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable SuperscriptsAndSubscripts()
         {
-            return CodeChartHelper.GetRange(8304, 8340, (int i) => i == 8306 || i == 8307 || i == 8335);
+            return CodeChartHelper.GetRange(
+                8304,
+                8340,
+                (int i) => i == 8306 || i == 8307 || i == 8335
+            );
         }
 
         /// <summary>
@@ -192,7 +217,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable MiscellaneousSymbols()
         {
-            return CodeChartHelper.GetRange(9728, 9983, (int i) => i == 9934 || i == 9954 || (i >= 9956 && i <= 9959));
+            return CodeChartHelper.GetRange(
+                9728,
+                9983,
+                (int i) => i == 9934 || i == 9954 || (i >= 9956 && i <= 9959)
+            );
         }
 
         /// <summary>
@@ -201,10 +230,26 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Dingbats()
         {
-            return CodeChartHelper.GetRange(9985, 10174,
-                (int i) => i == 9989 || i == 9994 || i == 9995 || i == 10024 || i == 10060 || i == 10062 ||
-                           i == 10067 || i == 10068 || i == 10069 || i == 10079 || i == 10080 || i == 10133 ||
-                           i == 10134 || i == 10135 || i == 10160);
+            return CodeChartHelper.GetRange(
+                9985,
+                10174,
+                (int i) =>
+                    i == 9989
+                    || i == 9994
+                    || i == 9995
+                    || i == 10024
+                    || i == 10060
+                    || i == 10062
+                    || i == 10067
+                    || i == 10068
+                    || i == 10069
+                    || i == 10079
+                    || i == 10080
+                    || i == 10133
+                    || i == 10134
+                    || i == 10135
+                    || i == 10160
+            );
         }
 
         /// <summary>
@@ -213,8 +258,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable MiscellaneousMathematicalSymbolsA()
         {
-            return CodeChartHelper.GetRange(10176, 10223,
-                (int i) => i == 10187 || i == 10189 || i == 10190 || i == 10191);
+            return CodeChartHelper.GetRange(
+                10176,
+                10223,
+                (int i) => i == 10187 || i == 10189 || i == 10190 || i == 10191
+            );
         }
 
         /// <summary>
@@ -268,7 +316,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable MiscellaneousSymbolsAndArrows()
         {
-            return CodeChartHelper.GetRange(11008, 11097, (int i) => i == 11085 || i == 11086 || i == 11087);
+            return CodeChartHelper.GetRange(
+                11008,
+                11097,
+                (int i) => i == 11085 || i == 11086 || i == 11087
+            );
         }
 
         /// <summary>
@@ -322,10 +374,20 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable EthiopicExtended()
         {
-            return CodeChartHelper.GetRange(11648, 11742,
-                (int i) => (i >= 11671 && i <= 11679) ||
-                           i == 11687 || i == 11695 || i == 11703 || i == 11711 ||
-                           i == 11719 || i == 11727 || i == 11735 || i == 11743);
+            return CodeChartHelper.GetRange(
+                11648,
+                11742,
+                (int i) =>
+                    (i >= 11671 && i <= 11679)
+                    || i == 11687
+                    || i == 11695
+                    || i == 11703
+                    || i == 11711
+                    || i == 11719
+                    || i == 11727
+                    || i == 11735
+                    || i == 11743
+            );
         }
     }
 }

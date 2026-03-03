@@ -70,11 +70,33 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Ethiopic()
         {
-            return CodeChartHelper.GetRange(4608, 4988,
-                (int i) => i == 4681 || i == 4686 || i == 4687 || i == 4695 || i == 4697 || i == 4702 || i == 4703 ||
-                           i == 4745 || i == 4750 || i == 4751 || i == 4785 || i == 4790 || i == 4791 || i == 4799 ||
-                           i == 4801 || i == 4806 || i == 4807 || i == 4823 || i == 4881 || i == 4886 || i == 4887 ||
-                           (i >= 4955 && i <= 4958));
+            return CodeChartHelper.GetRange(
+                4608,
+                4988,
+                (int i) =>
+                    i == 4681
+                    || i == 4686
+                    || i == 4687
+                    || i == 4695
+                    || i == 4697
+                    || i == 4702
+                    || i == 4703
+                    || i == 4745
+                    || i == 4750
+                    || i == 4751
+                    || i == 4785
+                    || i == 4790
+                    || i == 4791
+                    || i == 4799
+                    || i == 4801
+                    || i == 4806
+                    || i == 4807
+                    || i == 4823
+                    || i == 4881
+                    || i == 4886
+                    || i == 4887
+                    || (i >= 4955 && i <= 4958)
+            );
         }
 
         /// <summary>
@@ -164,7 +186,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Khmer()
         {
-            return CodeChartHelper.GetRange(6016, 6137, (int i) => i == 6110 || i == 6111 || (i >= 6122 && i <= 6127));
+            return CodeChartHelper.GetRange(
+                6016,
+                6137,
+                (int i) => i == 6110 || i == 6111 || (i >= 6122 && i <= 6127)
+            );
         }
 
         /// <summary>
@@ -173,27 +199,31 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Mongolian()
         {
-            return CodeChartHelper.GetRange(6144, 6314, delegate (int i)
-            {
-                switch (i)
+            return CodeChartHelper.GetRange(
+                6144,
+                6314,
+                delegate(int i)
                 {
-                    default:
-                        if (i >= 6264)
-                        {
-                            return i <= 6271;
-                        }
+                    switch (i)
+                    {
+                        default:
+                            if (i >= 6264)
+                            {
+                                return i <= 6271;
+                            }
 
-                        return false;
-                    case 6159:
-                    case 6170:
-                    case 6171:
-                    case 6172:
-                    case 6173:
-                    case 6174:
-                    case 6175:
-                        return true;
+                            return false;
+                        case 6159:
+                        case 6170:
+                        case 6171:
+                        case 6172:
+                        case 6173:
+                        case 6174:
+                        case 6175:
+                            return true;
+                    }
                 }
-            });
+            );
         }
 
         /// <summary>
@@ -211,29 +241,33 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Limbu()
         {
-            return CodeChartHelper.GetRange(6400, 6479, delegate (int i)
-            {
-                switch (i)
+            return CodeChartHelper.GetRange(
+                6400,
+                6479,
+                delegate(int i)
                 {
-                    default:
-                        if ((i < 6460 || i > 6463) && i != 6465 && i != 6466)
-                        {
-                            return i == 6467;
-                        }
+                    switch (i)
+                    {
+                        default:
+                            if ((i < 6460 || i > 6463) && i != 6465 && i != 6466)
+                            {
+                                return i == 6467;
+                            }
 
-                        break;
-                    case 6429:
-                    case 6430:
-                    case 6431:
-                    case 6444:
-                    case 6445:
-                    case 6446:
-                    case 6447:
-                        break;
+                            break;
+                        case 6429:
+                        case 6430:
+                        case 6431:
+                        case 6444:
+                        case 6445:
+                        case 6446:
+                        case 6447:
+                            break;
+                    }
+
+                    return true;
                 }
-
-                return true;
-            });
+            );
         }
 
         /// <summary>
@@ -251,8 +285,12 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable NewTaiLue()
         {
-            return CodeChartHelper.GetRange(6528, 6623,
-                (int i) => (i >= 6572 && i <= 6575) || (i >= 6602 && i <= 6607) || (i >= 6619 && i <= 6621));
+            return CodeChartHelper.GetRange(
+                6528,
+                6623,
+                (int i) =>
+                    (i >= 6572 && i <= 6575) || (i >= 6602 && i <= 6607) || (i >= 6619 && i <= 6621)
+            );
         }
 
         /// <summary>
@@ -279,29 +317,33 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable TaiTham()
         {
-            return CodeChartHelper.GetRange(6688, 6829, delegate (int i)
-            {
-                switch (i)
+            return CodeChartHelper.GetRange(
+                6688,
+                6829,
+                delegate(int i)
                 {
-                    default:
-                        if (i >= 6810)
-                        {
-                            return i <= 6815;
-                        }
+                    switch (i)
+                    {
+                        default:
+                            if (i >= 6810)
+                            {
+                                return i <= 6815;
+                            }
 
-                        return false;
-                    case 6751:
-                    case 6781:
-                    case 6782:
-                    case 6794:
-                    case 6795:
-                    case 6796:
-                    case 6797:
-                    case 6798:
-                    case 6799:
-                        return true;
+                            return false;
+                        case 6751:
+                        case 6781:
+                        case 6782:
+                        case 6794:
+                        case 6795:
+                        case 6796:
+                        case 6797:
+                        case 6798:
+                        case 6799:
+                            return true;
+                    }
                 }
-            });
+            );
         }
 
         /// <summary>
@@ -328,8 +370,11 @@ namespace AntiLdapInjection
         /// <returns>The safe characters for the code table.</returns>
         internal static IEnumerable Lepcha()
         {
-            return CodeChartHelper.GetRange(7168, 7247,
-                (int i) => (i >= 7224 && i <= 7226) || (i >= 7242 && i <= 7244));
+            return CodeChartHelper.GetRange(
+                7168,
+                7247,
+                (int i) => (i >= 7224 && i <= 7226) || (i >= 7242 && i <= 7244)
+            );
         }
 
         /// <summary>

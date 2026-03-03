@@ -216,6 +216,6 @@ namespace AntiLdapInjection
         /// The Latin Extended Additional code table.
         /// </summary>
         /// <remarks>https://www.unicode.org/charts/PDF/U1E00.pdf</remarks>
-        LatinExtendedAdditional = 0x40000000
+        LatinExtendedAdditional = 0x40000000,
     }
 }
