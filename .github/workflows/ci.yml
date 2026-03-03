@@ -22,6 +22,8 @@ jobs:
   build:
     name: ${{ matrix.platform }} build
     runs-on: ${{ matrix.platform }}
+    permissions:
+      contents: read
 
     strategy:
       fail-fast: false
