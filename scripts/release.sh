@@ -161,7 +161,7 @@ function ensure_isolated_change() {
   # shellcheck disable=2154,2086
   eval "${invocation}"
 
-  local changed_output changed_files numstat insertions deletions changed_file
+  local changed_output changed_count numstat insertions deletions changed_file
 
   # ensure only one file changed, one insertion/deletion of 'AntiLdapInjection.csproj' file
 
@@ -171,8 +171,8 @@ function ensure_isolated_change() {
     return 1
   fi
 
-  mapfile -t changed_files <<< "${changed_output}"
-  if [[ "${#changed_files[@]}" -ne 1 ]] || [[ "${changed_files[0]}" != "${PROJECT_FILE}" ]]; then
+  changed_count="$(printf "%s\n" "${changed_output}" | wc -l | tr -d '[:space:]')"
+  if [[ "${changed_count}" != "1" ]] || [[ "${changed_output}" != "${PROJECT_FILE}" ]]; then
     say_err "Expected exactly one modified file: ${PROJECT_FILE}."
     return 1
   fi
