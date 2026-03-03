@@ -11,11 +11,15 @@ updates:
     target-branch: main
     commit-message:
       prefix: 'chore(deps): '
+    open-pull-requests-limit: 5
     groups:
       actions-minor:
         update-types:
           - minor
           - patch
+      actions-major:
+        update-types:
+          - major
     labels:
       - github-actions
       - dependencies
@@ -28,11 +32,15 @@ updates:
     target-branch: main
     commit-message:
       prefix: 'chore(deps): '
+    open-pull-requests-limit: 5
     groups:
       nuget-minor:
         update-types:
           - minor
           - patch
+      nuget-major:
+        update-types:
+          - major
     labels:
       - nuget
       - dependencies
